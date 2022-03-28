@@ -1,0 +1,934 @@
+import {
+  CodeSurfer,
+  CodeSurferColumns,
+  Step,
+} from "code-surfer";
+import { github, vsDark } from "@code-surfer/themes";
+
+import { future } from '@mdx-deck/themes';
+export const theme = future;
+
+import { Block, Image } from './components';
+
+<Block>
+  <Block centralized>
+    <Image
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
+      height={300}
+      width={340}
+    />
+  </Block>
+  <h2>Framework Front-End II <br/>React</h2>
+</Block>
+
+---
+
+<Block>
+  <h2>Temas que vamos abordar</h2>
+  <Block centralized>
+    <ul>
+      <li>Introdução aos princípios funcionais</li>
+      <li style="opacity: 0.1;">Componentes Funcionais</li>
+      <li style="opacity: 0.1;">useState</li>
+      <li style="opacity: 0.1;">useEffect</li>
+      <li style="opacity: 0.1;">useRef</li>
+      <li style="opacity: 0.1;">useContext</li>
+      <li style="opacity: 0.1;">Composição e Customização de Hooks</li>
+      <li style="opacity: 0.1;">Lógica de Programação I</li>
+    </ul>
+  </Block>
+</Block>
+
+---
+
+<Block>
+  <h2>Temas que vamos abordar</h2>
+  <Block centralized>
+    <ul>
+      <li style="opacity: 0.1;">Introdução aos princípios funcionais</li>
+      <li>Componentes Funcionais</li>
+      <li style="opacity: 0.1;">useState</li>
+      <li style="opacity: 0.1;">useEffect</li>
+      <li style="opacity: 0.1;">useRef</li>
+      <li style="opacity: 0.1;">useContext</li>
+      <li style="opacity: 0.1;">Composição e Customização de Hooks</li>
+      <li style="opacity: 0.1;">Lógica de Programação I</li>
+    </ul>
+  </Block>
+</Block>
+
+---
+
+<Block>
+  <h2>Temas que vamos abordar</h2>
+  <Block centralized>
+    <ul>
+      <li style="opacity: 0.1;">Introdução aos princípios funcionais</li>
+      <li style="opacity: 0.1;">Componentes Funcionais</li>
+      <li>useState</li>
+      <li style="opacity: 0.1;">useEffect</li>
+      <li style="opacity: 0.1;">useRef</li>
+      <li style="opacity: 0.1;">useContext</li>
+      <li style="opacity: 0.1;">Composição e Customização de Hooks</li>
+      <li style="opacity: 0.1;">Lógica de Programação I</li>
+    </ul>
+  </Block>
+</Block>
+
+---
+
+<Block>
+  <h2>Temas que vamos abordar</h2>
+  <Block centralized>
+    <ul>
+      <li style="opacity: 0.1;">Introdução aos princípios funcionais</li>
+      <li style="opacity: 0.1;">Componentes Funcionais</li>
+      <li style="opacity: 0.1;">useState</li>
+      <li>useEffect</li>
+      <li style="opacity: 0.1;">useRef</li>
+      <li style="opacity: 0.1;">useContext</li>
+      <li style="opacity: 0.1;">Composição e Customização de Hooks</li>
+      <li style="opacity: 0.1;">Lógica de Programação I</li>
+    </ul>
+  </Block>
+</Block>
+
+---
+
+<Block>
+  <h2>Temas que vamos abordar</h2>
+  <Block centralized>
+    <ul>
+      <li style="opacity: 0.1;">Introdução aos princípios funcionais</li>
+      <li style="opacity: 0.1;">Componentes Funcionais</li>
+      <li style="opacity: 0.1;">useState</li>
+      <li style="opacity: 0.1;">useEffect</li>
+      <li>useRef</li>
+      <li style="opacity: 0.1;">useContext</li>
+      <li style="opacity: 0.1;">Composição e Customização de Hooks</li>
+      <li style="opacity: 0.1;">Lógica de Programação I</li>
+    </ul>
+  </Block>
+</Block>
+
+---
+
+<Block>
+  <h2>Temas que vamos abordar</h2>
+  <Block centralized>
+    <ul>
+      <li style="opacity: 0.1;">Introdução aos princípios funcionais</li>
+      <li style="opacity: 0.1;">Componentes Funcionais</li>
+      <li style="opacity: 0.1;">useState</li>
+      <li style="opacity: 0.1;">useEffect</li>
+      <li style="opacity: 0.1;">useRef</li>
+      <li>useContext</li>
+      <li style="opacity: 0.1;">Composição e Customização de Hooks</li>
+      <li style="opacity: 0.1;">Lógica de Programação I</li>
+    </ul>
+  </Block>
+</Block>
+
+---
+
+<Block>
+  <h2>Temas que vamos abordar</h2>
+  <Block centralized>
+    <ul>
+      <li style="opacity: 0.1;">Introdução aos princípios funcionais</li>
+      <li style="opacity: 0.1;">Componentes Funcionais</li>
+      <li style="opacity: 0.1;">useState</li>
+      <li style="opacity: 0.1;">useEffect</li>
+      <li style="opacity: 0.1;">useRef</li>
+      <li style="opacity: 0.1;">useContext</li>
+      <li>Composição e Customização de Hooks</li>
+      <li style="opacity: 0.1;">Lógica de Programação I</li>
+    </ul>
+  </Block>
+</Block>
+
+---
+
+<Block>
+  <h2>Temas que vamos abordar</h2>
+  <Block centralized>
+    <ul>
+      <li style="opacity: 0.1;">Introdução aos princípios funcionais</li>
+      <li style="opacity: 0.1;">Componentes Funcionais</li>
+      <li style="opacity: 0.1;">useState</li>
+      <li style="opacity: 0.1;">useEffect</li>
+      <li style="opacity: 0.1;">useRef</li>
+      <li style="opacity: 0.1;">useContext</li>
+      <li style="opacity: 0.1;">Composição e Customização de Hooks</li>
+      <li>Lógica de Programação I</li>
+    </ul>
+  </Block>
+</Block>
+
+---
+
+## Quem sou eu?
+- Erich Menezes
+- @Porto Alegre / RS
+- Fullstack SWE @Uber
+
+---
+
+## Quem são vocês?
+- Nome
+- Já programa? Em qual linguagem?
+- Comida favorita?
+- Algum tema especial que queira aprender sobre React?
+
+---
+
+<Block>
+  <h2>Onde vocês estão?</h2>
+  <Block centralized>
+    <ul>
+      <li>Additions -> Add Marker - Simple -> Nome + Cidade</li>
+      <li>
+        <a href="https://www.zeemaps.com/map?group=4362779&location=Brasil#">
+          https://www.zeemaps.com/map?group=4362779&location=Brasil#
+        </a>
+      </li>
+    </ul>
+  </Block>
+</Block>
+
+---
+
+<Block>
+  <h3>State of js 2021</h3>
+  <Image
+    src="https://i.ibb.co/0DPmz6P/Screen-Shot-2022-03-27-at-20-27-36.png"
+    height="640px"
+    width="1000px"
+  />
+</Block>
+
+---
+
+<Block>
+  <h3>State of js 2021</h3>
+  <Image
+    src="https://i.ibb.co/NKfpQKF/Screen-Shot-2022-03-27-at-20-32-20.png"
+    height="640px"
+    width="1000px"
+  />
+</Block>
+
+---
+
+<Block>
+  <h3>State of js 2021</h3>
+  <Image
+    src="https://i.ibb.co/thcLtzW/Screen-Shot-2022-03-27-at-20-34-41.png"
+    height="700px"
+    width="1000px"
+  />
+</Block>
+
+---
+
+<Block>
+  <h2>O que é <span style="color: #61dafb;">React</span>?</h2>
+  <Block centralized>
+    <ul>
+      <li>Uma biblioteca em JavaScript pra construir interfaces de usuário</li>
+      <li style="opacity: 0.1;">
+        API declarativa
+        <ul>
+          <li>React renderiza a tela novamente quando o estado muda</li>
+        </ul>
+      </li>
+      <li style="opacity: 0.1;">Componentes encapsulados</li>
+      <li style="opacity: 0.1;">Sem templates</li>
+    </ul>
+  </Block>
+</Block>
+
+---
+
+<Block>
+  <h2>O que é <span style="color: #61dafb;">React</span>?</h2>
+  <Block centralized>
+    <ul>
+      <li style="opacity: 0.1;">Uma biblioteca em JavaScript pra construir interfaces de usuário</li>
+      <li>
+        API declarativa
+        <ul>
+          <li style="opacity: 0.1;">React renderiza a tela novamente quando o estado muda</li>
+        </ul>
+      </li>
+      <li style="opacity: 0.1;">Componentes encapsulados</li>
+      <li style="opacity: 0.1;">Sem templates</li>
+    </ul>
+  </Block>
+</Block>
+
+---
+
+<Block>
+  <h2>O que é <span style="color: #61dafb;">React</span>?</h2>
+  <Block centralized>
+    <ul>
+      <li style="opacity: 0.1;">Uma biblioteca em JavaScript pra construir interfaces de usuário</li>
+      <li>
+        API declarativa
+        <ul>
+          <li>React renderiza a tela novamente quando o estado muda</li>
+        </ul>
+      </li>
+      <li style="opacity: 0.1;">Componentes encapsulados</li>
+      <li style="opacity: 0.1;">Sem templates</li>
+    </ul>
+  </Block>
+</Block>
+
+---
+
+<Block>
+  <h2>O que é <span style="color: #61dafb;">React</span>?</h2>
+  <Block centralized>
+    <ul>
+      <li style="opacity: 0.1;">Uma biblioteca em JavaScript pra construir interfaces de usuário</li>
+      <li style="opacity: 0.1;">
+        API declarativa
+        <ul>
+          <li>React renderiza a tela novamente quando o estado muda</li>
+        </ul>
+      </li>
+      <li>Componentes encapsulados</li>
+      <li style="opacity: 0.1;">Sem templates</li>
+    </ul>
+  </Block>
+</Block>
+
+---
+
+<Block>
+  <h2>O que é <span style="color: #61dafb;">React</span>?</h2>
+  <Block centralized>
+    <ul>
+      <li style="opacity: 0.1;">Uma biblioteca em JavaScript pra construir interfaces de usuário</li>
+      <li style="opacity: 0.1;">
+        API declarativa
+        <ul>
+          <li>React renderiza a tela novamente quando o estado muda</li>
+        </ul>
+      </li>
+      <li style="opacity: 0.1;">Componentes encapsulados</li>
+      <li>Sem templates</li>
+    </ul>
+  </Block>
+</Block>
+
+---
+
+<Block centralized>
+  <h3>Princípios funcionais</h3>
+</Block>
+
+---
+
+<Block centralized>
+  <Image
+    src="https://i.ibb.co/mNDD91c/generatedtext.png"
+    height="100px"
+    width="700px"
+  />
+</Block>
+
+---
+
+<Block centralized>
+  <h3>Princípios funcionais</h3>
+</Block>
+
+---
+
+<Block>
+  <h3>Princípios funcionais</h3>
+  <ul>
+    <li>Funçōes puras</li>
+    <li style="opacity: 0.1;">Imutabilidade</li>
+    <li style="opacity: 0.1;">Transparência referencial</li>
+    <li style="opacity: 0.1;">Funçōes como entidades de primeira classe</li>
+  </ul>
+</Block>
+
+---
+
+<Block>
+  <h3>Princípios funcionais</h3>
+  <ul>
+    <li style="opacity: 0.1;">Funçōes puras</li>
+    <li>Imutabilidade</li>
+    <li style="opacity: 0.1;">Transparência referencial</li>
+    <li style="opacity: 0.1;">Funçōes como entidades de primeira classe</li>
+  </ul>
+</Block>
+
+---
+
+<Block>
+  <h3>Princípios funcionais</h3>
+  <ul>
+    <li style="opacity: 0.1;">Funçōes puras</li>
+    <li style="opacity: 0.1;">Imutabilidade</li>
+    <li>Transparência referencial</li>
+    <li style="opacity: 0.1;">Funçōes como entidades de primeira classe</li>
+  </ul>
+</Block>
+
+---
+
+<Block>
+  <h3>Princípios funcionais</h3>
+  <ul>
+    <li style="opacity: 0.1;">Funçōes puras</li>
+    <li style="opacity: 0.1;">Imutabilidade</li>
+    <li style="opacity: 0.1;">Transparência referencial</li>
+    <li>Funçōes como entidades de primeira classe</li>
+  </ul>
+</Block>
+
+---
+
+<Block>
+  <h2>Funçōes puras</h2>
+  <Block centralized>
+    <ul>
+      <li>Com os mesmos argumentos, retornam os mesmos resultados (determinística)</li>
+      <li>Sem efeitos colaterais (side effects)</li>
+    </ul>
+  </Block>
+</Block>
+
+---
+
+<CodeSurfer>
+
+```js title="funçōes puras"
+function calculaAreaDeCirculo() {
+
+}
+```
+
+```js title="funçōes puras"
+let raio = 5;
+function calculaAreaDeCirculo() {
+
+}
+```
+
+```js title="funçōes puras"
+let raio = 5;
+function calculaAreaDeCirculo() {
+  return Math.pow(raio, 2) * Math.PI;
+}
+```
+
+```js title="funçōes puras"
+let raio = 5;
+setInterval(() => raio *= 2, 50);
+```
+
+```js title="funçōes puras"
+let raio = 5;
+setInterval(() => raio *= 2, 50);
+
+calculaAreaDeCirculo();
+```
+
+```js title="funçōes puras"
+let raio = 5;
+setInterval(() => raio *= 2, 50);
+
+calculaAreaDeCirculo();
+calculaAreaDeCirculo();
+calculaAreaDeCirculo();
+calculaAreaDeCirculo();
+```
+
+```js title="funçōes puras"
+function calculaAreaDeCirculo(raio) {
+  return Math.pow(raio, 2) * Math.PI;
+}
+```
+
+```js title="funçōes puras"
+calculaAreaDeCirculo(10);
+calculaAreaDeCirculo(10);
+calculaAreaDeCirculo(10);
+calculaAreaDeCirculo(10);
+```
+
+```js title="funçōes puras"
+calculaAreaDeCirculo(5);
+calculaAreaDeCirculo(5);
+calculaAreaDeCirculo(5);
+calculaAreaDeCirculo(5);
+```
+
+```js title="funçōes puras"
+const estudantes = [];
+```
+
+```js title="funçōes puras"
+const estudantes = [
+  { nome: 'Dick Grayson', nota: 6 },
+  { nome: 'Bruce Wayne', nota: 10 },
+  { nome: 'Alfred Pennyworth', nota: 3 },
+];
+```
+
+```js title="funçōes puras"
+const estudantes = [
+  { nome: 'Dick Grayson', nota: 6 },
+  { nome: 'Bruce Wayne', nota: 10 },
+  { nome: 'Alfred Pennyworth', nota: 3 },
+];
+
+function encontraAlunoComMaiorNota(estudantes) {
+
+}
+```
+
+```js title="funçōes puras"
+const estudantes = [
+  { nome: 'Dick Grayson', nota: 6 },
+  { nome: 'Bruce Wayne', nota: 10 },
+  { nome: 'Alfred Pennyworth', nota: 3 },
+];
+
+function encontraAlunoComMaiorNota(estudantes) {
+  estudantes.sort((a, b) => a.nota - b.nota);
+}
+```
+
+```js title="funçōes puras"
+const estudantes = [
+  { nome: 'Dick Grayson', nota: 6 },
+  { nome: 'Bruce Wayne', nota: 10 },
+  { nome: 'Alfred Pennyworth', nota: 3 },
+];
+
+function encontraAlunoComMaiorNota(estudantes) {
+  estudantes.sort((a, b) => a.nota - b.nota);
+  // ué, não retorna nada?
+}
+```
+
+```js title="funçōes puras"
+const estudantes = [
+  { nome: 'Dick Grayson', nota: 6 },
+  { nome: 'Bruce Wayne', nota: 10 },
+  { nome: 'Alfred Pennyworth', nota: 3 },
+];
+
+function encontraAlunoComMaiorNota(estudantes) {
+  estudantes.sort((a, b) => a.nota - b.nota);
+  // ué, não retorna nada?
+
+  const estudanteComMaiorNota = estudantes.pop();
+}
+```
+
+```js title="funçōes puras"
+const estudantes = [
+  { nome: 'Dick Grayson', nota: 6 },
+  { nome: 'Bruce Wayne', nota: 10 },
+  { nome: 'Alfred Pennyworth', nota: 3 },
+];
+
+function encontraAlunoComMaiorNota(estudantes) {
+  estudantes.sort((a, b) => a.nota - b.nota);
+  // ué, não retorna nada?
+
+  const estudanteComMaiorNota = estudantes.pop();
+  return estudanteComMaiorNota;
+}
+```
+
+```js title="funçōes puras"
+const estudantes = [
+  { nome: 'Dick Grayson', nota: 6 },
+  { nome: 'Bruce Wayne', nota: 10 },
+  { nome: 'Alfred Pennyworth', nota: 3 },
+];
+
+encontraAlunoComMaiorNota(estudantes);
+```
+
+```js title="funçōes puras"
+estudantes = ?
+```
+
+```js title="funçōes puras"
+estudantes = [
+  { nome: 'Alfred Pennyworth', nota: 3 },
+  { nome: 'Dick Grayson', nota: 6 },
+];
+```
+
+</CodeSurfer>
+
+---
+
+<CodeSurfer>
+
+```js title="imutabilidade"
+const estudantes = [
+  { nome: 'Dick Grayson', nota: 6 },
+  { nome: 'Bruce Wayne', nota: 10 },
+  { nome: 'Alfred Pennyworth', nota: 3 },
+];
+```
+
+```js title="imutabilidade"
+const estudantes = [
+  { nome: 'Dick Grayson', nota: 6 },
+  { nome: 'Bruce Wayne', nota: 10 },
+  { nome: 'Alfred Pennyworth', nota: 3 },
+];
+
+estudantes.at(0).nome = 'Jack Napier';
+```
+
+```js title="imutabilidade"
+const estudantes = [
+  { nome: 'Dick Grayson', nota: 6 },
+  { nome: 'Bruce Wayne', nota: 10 },
+  { nome: 'Alfred Pennyworth', nota: 3 },
+];
+
+estudantes.at(0).nome = 'Jack Napier';
+estudantes = ?
+```
+
+```js title="imutabilidade"
+const estudantes = [
+  { nome: 'Dick Grayson', nota: 6 },
+  { nome: 'Bruce Wayne', nota: 10 },
+  { nome: 'Alfred Pennyworth', nota: 3 },
+];
+
+estudantesDoMal = estudantes.map(estudante => {
+
+})
+```
+
+```js title="imutabilidade"
+const estudantes = [
+  { nome: 'Dick Grayson', nota: 6 },
+  { nome: 'Bruce Wayne', nota: 10 },
+  { nome: 'Alfred Pennyworth', nota: 3 },
+];
+
+estudantesDoMal = estudantes.map(estudante => {
+  return {
+    nota: estudante.nota,
+    nome: 'Jack Napier',
+  };
+})
+```
+
+```js title="imutabilidade"
+const estudantes = [
+  { nome: 'Dick Grayson', nota: 6 },
+  { nome: 'Bruce Wayne', nota: 10 },
+  { nome: 'Alfred Pennyworth', nota: 3 },
+];
+
+estudantesDoMal = estudantes.map(estudante => ({
+    nota: estudante.nota,
+    nome: 'Jack Napier',
+}));
+```
+
+```js title="imutabilidade"
+const estudantes = [
+  { nome: 'Dick Grayson', nota: 6 },
+  { nome: 'Bruce Wayne', nota: 10 },
+  { nome: 'Alfred Pennyworth', nota: 3 },
+];
+
+estudantesDoMal = estudantes.map(estudante => ({
+    nota: estudante.nota,
+    nome: 'Jack Napier',
+}));
+
+estudantes = ?
+estudantesDoMal = ?
+```
+
+</CodeSurfer>
+
+---
+
+<Block>
+  <h2>Transparência referencial</h2>
+  <ul>
+    <li>Funçōes puras + imutabilidade</li>
+    <li style="opacity: 0.1;">Podemos substituir a chamada da função pelo resultado?</li>
+    <li style="opacity: 0.1;">Podemos substituir a chamada da função pelo resultado?</li>
+    <li style="opacity: 0.1;">sum(5, 2) + sum(3, 4)</li>
+  </ul>
+</Block>
+
+---
+
+<Block>
+  <h2>Transparência referencial</h2>
+  <ul>
+    <li style="opacity: 0.1;">Funçōes puras + imutabilidade</li>
+    <li>Podemos substituir a chamada da função pelo resultado?</li>
+    <li style="opacity: 0.1;">Podemos substituir a chamada da função pelo resultado?</li>
+    <li style="opacity: 0.1;">sum(5, 2) + sum(3, 4)</li>
+  </ul>
+</Block>
+
+---
+
+<Block>
+  <h2>Transparência referencial</h2>
+  <ul>
+    <li style="opacity: 0.1;">Funçōes puras + imutabilidade</li>
+    <li style="opacity: 0.1;">Podemos substituir a chamada da função pelo resultado?</li>
+    <li>Podemos substituir a chamada da função pelo resultado?</li>
+    <li style="opacity: 0.1;">sum(5, 2) + sum(3, 4)</li>
+  </ul>
+</Block>
+
+---
+
+<Block>
+  <h2>Transparência referencial</h2>
+  <ul>
+    <li style="opacity: 0.1;">Funçōes puras + imutabilidade</li>
+    <li style="opacity: 0.1;">Podemos substituir a chamada da função pelo resultado?</li>
+    <li style="opacity: 0.1;">Podemos substituir a chamada da função pelo resultado?</li>
+    <li>sum(5, 2) + sum(3, 4)</li>
+  </ul>
+</Block>
+
+---
+
+<Block>
+  <h2>Transparência referencial</h2>
+  <ul>
+    <li style="opacity: 0.1;">Funçōes puras + imutabilidade</li>
+    <li style="opacity: 0.1;">Podemos substituir a chamada da função pelo resultado?</li>
+    <li style="opacity: 0.1;">Podemos substituir a chamada da função pelo resultado?</li>
+    <li>7 + sum(3, 4)</li>
+  </ul>
+</Block>
+
+---
+
+<Block>
+  <h2>Transparência referencial</h2>
+  <ul>
+    <li style="opacity: 0.1;">Funçōes puras + imutabilidade</li>
+    <li style="opacity: 0.1;">Podemos substituir a chamada da função pelo resultado?</li>
+    <li style="opacity: 0.1;">Podemos substituir a chamada da função pelo resultado?</li>
+    <li>7 + 7</li>
+  </ul>
+</Block>
+
+---
+
+<CodeSurfer>
+
+```js title="Funçōes como entidades de primeira classe"
+const somaCinco = (numero) => numero + 5;
+```
+
+```js title="Funçōes como entidades de primeira classe"
+const somaCinco = (numero) => numero + 5;
+const numerosPrimos = [2, 3, 5, 7];
+```
+
+```js title="Funçōes como entidades de primeira classe"
+const somaCinco = (numero) => numero + 5;
+const numerosPrimos = [2, 3, 5, 7];
+
+function alteraNumeros(fn, numeros) {
+
+}
+```
+
+```js title="Funçōes como entidades de primeira classe"
+const somaCinco = (numero) => numero + 5;
+const numerosPrimos = [2, 3, 5, 7];
+
+function alteraNumeros(fn, numeros) {
+  const result = [];
+}
+```
+
+```js title="Funçōes como entidades de primeira classe"
+const somaCinco = (numero) => numero + 5;
+const numerosPrimos = [2, 3, 5, 7];
+
+function alteraNumeros(fn, numeros) {
+  const result = [];
+
+  for (let i = 0; i < numeros.length; i++) {
+
+  }
+}
+```
+
+```js title="Funçōes como entidades de primeira classe"
+const somaCinco = (numero) => numero + 5;
+const numerosPrimos = [2, 3, 5, 7];
+
+function alteraNumeros(fn, numeros) {
+  const result = [];
+
+  for (let i = 0; i < numeros.length; i++) {
+   const numero = numeros[i];
+  }
+}
+```
+
+```js title="Funçōes como entidades de primeira classe"
+const somaCinco = (numero) => numero + 5;
+const numerosPrimos = [2, 3, 5, 7];
+
+function alteraNumeros(fn, numeros) {
+  const result = [];
+
+  for (let i = 0; i < numeros.length; i++) {
+   const numero = numeros[i];
+   const resultado = fn(numero);
+  }
+}
+```
+
+```js title="Funçōes como entidades de primeira classe"
+const somaCinco = (numero) => numero + 5;
+const numerosPrimos = [2, 3, 5, 7];
+
+function alteraNumeros(fn, numeros) {
+  const result = [];
+
+  for (let i = 0; i < numeros.length; i++) {
+   const numero = numeros[i];
+   const resultado = fn(numero);
+
+   result.push(result);
+  }
+
+  return result;
+}
+```
+
+```js title="Funçōes como entidades de primeira classe"
+const somaCinco = (numero) => numero + 5;
+const numerosPrimos = [2, 3, 5, 7];
+
+function alteraNumeros(fn, numeros) {
+  return numeros.map(numero => (
+    fn(numero)
+  ));
+}
+```
+
+```js title="Funçōes como entidades de primeira classe"
+const somaCinco = (numero) => numero + 5;
+const numerosPrimos = [2, 3, 5, 7];
+
+function alteraNumeros(fn, numeros) {
+  return numeros.map(fn);
+}
+```
+
+</CodeSurfer>
+
+---
+
+<Block>
+  <h3>Como iniciar um projeto React?</h3>
+  <Block centralized>
+    <ul>
+      <li>create-react-app</li>
+      <li>next</li>
+      <li>remix</li>
+    </ul>
+  </Block>
+</Block>
+
+---
+
+<Block>
+  <h3>Como iniciar um projeto React?</h3>
+  <Block centralized>
+    <ul>
+      <li style="color: #61dafb;">create-react-app</li>
+      <li style="opacity: .1">next</li>
+      <li style="opacity: .1">remix</li>
+    </ul>
+  </Block>
+</Block>
+
+---
+
+<CodeSurfer>
+
+```js title="Componentes funcionais"
+function App() {
+  return (
+
+  );
+}
+```
+
+```js title="Componentes funcionais"
+function App() {
+  return (
+    <h1>
+      Nosso primeiro app!
+    </h1>
+  );
+}
+```
+
+```js title="Componentes funcionais"
+function App() {
+  const hoje = new Date().toLocaleDateString('pt-BR');
+
+  return (
+    <h1>
+      Nosso primeiro app!
+    </h1>
+  );
+}
+```
+
+```js title="Componentes funcionais"
+function App() {
+  const hoje = new Date().toLocaleDateString('pt-BR');
+
+  return (
+    <h1>
+      Nosso primeiro app! <br/>
+      Feito em {hoje}
+    </h1>
+  );
+}
+```
+
+</CodeSurfer>
+
+---
+
+<Block>
+  <h2>Vamos começar nossos testes aqui:</h2>
+  <Block centralized>
+    <a href="https://codesandbox.io/">https://codesandbox.io/</a>
+  </Block>
+</Block>
