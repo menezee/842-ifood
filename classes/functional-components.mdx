@@ -1,0 +1,545 @@
+import {
+  CodeSurfer,
+  CodeSurferColumns,
+  Step,
+} from "code-surfer";
+
+import { future } from '@mdx-deck/themes';
+import { nightOwl, ultramin } from "@code-surfer/themes";
+
+export const theme = future;
+
+import { Block, Image } from './components';
+
+<Block>
+  <Block centralized>
+    <Image
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
+      height={300}
+      width={340}
+    />
+  </Block>
+  <h2>Framework Front-End II <br/>React</h2>
+</Block>
+
+---
+
+<CodeSurferColumns themes={[nightOwl, ultramin]}>
+
+<Step>
+
+```js
+const pessoa = {
+  nome: 'Bruce Wayne',
+  emprego: 'milionário',
+};
+```
+
+```js
+const pessoa = {
+  nome: 'Bruce Wayne',
+  emprego: 'milionário',
+};
+```
+
+</Step>
+
+<Step>
+
+```js 5
+const pessoa = {
+  nome: 'Bruce Wayne',
+  emprego: 'milionário',
+};
+const nome = pessoa.nome;
+```
+
+```js 5
+const pessoa = {
+  nome: 'Bruce Wayne',
+  emprego: 'milionário',
+};
+const { nome } = pessoa;
+```
+
+</Step>
+
+<Step>
+
+```js
+const comidas = [
+  'Arepa',
+  'Patacon',
+  'Pan de bono',
+];
+```
+
+```js
+const comidas = [
+  'Arepa',
+  'Patacon',
+  'Pan de bono',
+];
+```
+
+</Step>
+
+<Step>
+
+```js 6,7
+const comidas = [
+  'Arepa',
+  'Patacon',
+  'Pan de bono',
+];
+const primeira = comidas.at(0);
+const segunda = comidas[1];
+```
+
+```js 6
+const comidas = [
+  'Arepa',
+  'Patacon',
+  'Pan de bono',
+];
+const [primeira, segunda] = comidas;
+```
+
+</Step>
+
+<Step>
+
+```js
+function greet() {
+  console.log('Hello world!');
+}
+```
+
+```js
+function greet() {
+  console.log('Hello world!');
+}
+```
+
+</Step>
+
+<Step>
+
+```js 5:7
+function greet() {
+  console.log('Hello world!');
+}
+
+export {
+  greet,
+};
+```
+
+```js 5
+function greet() {
+  console.log('Hello world!');
+}
+
+export default greet;
+```
+
+</Step>
+
+<Step>
+
+```js 1
+export function greet() {
+  console.log('Hello world!');
+}
+```
+
+```js 1
+export default function greet() {
+  console.log('Hello world!');
+}
+```
+
+</Step>
+
+<Step>
+
+```js
+export function greet() {
+  console.log('Hello world!');
+}
+```
+
+```js 1
+import { greet } from './';
+```
+
+</Step>
+
+<Step>
+
+```js
+function greet() {
+  console.log('Hello world!');
+}
+async function wait(ms = 2_000) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
+}
+
+export {
+  greet,
+  wait,
+};
+```
+
+```js
+import { greet, wait } from './';
+```
+
+</Step>
+
+<Step>
+
+```js
+function greet() {
+  console.log('Hello world!');
+}
+async function wait(ms = 2_000) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
+}
+
+export {
+  greet,
+  wait,
+};
+```
+
+```js
+import * as minhasFuncoes from './';
+minhasFuncoes.greet();
+minhasFuncoes.wait();
+```
+
+</Step>
+
+<Step>
+
+```js
+export default function greet() {
+  console.log('Hello world!');
+}
+```
+
+```js 1
+import greet from './';
+```
+
+</Step>
+
+</CodeSurferColumns>
+
+---
+
+<CodeSurfer>
+
+```js
+function ListaDeEstudantes() {
+
+}
+```
+
+```js
+function ListaDeEstudantes() {
+  return (
+
+  );
+}
+```
+
+```js
+function ListaDeEstudantes() {
+  return (
+    <ul>
+    </ul>
+  );
+}
+```
+
+```js
+function ListaDeEstudantes() {
+  return (
+    <ul>
+      <li>Ash</li>
+      <li>Brock</li>
+      <li>Misty</li>
+    </ul>
+  );
+}
+```
+
+```js
+function ListaDeEstudantes() {
+  const estudantes = [
+    'Ash',
+    'Brock',
+    'Misty',
+  ];
+
+  return (
+    <ul>
+      <li>Ash</li>
+      <li>Brock</li>
+      <li>Misty</li>
+    </ul>
+  );
+}
+```
+
+```js
+function ListaDeEstudantes() {
+  const estudantes = [
+    'Ash',
+    'Brock',
+    'Misty',
+  ];
+
+  return (
+    <section>
+      <ul>
+        <li>Ash</li>
+        <li>Brock</li>
+        <li>Misty</li>
+      </ul>
+    </section>
+  );
+}
+```
+
+```js
+function ListaDeEstudantes() {
+  const estudantes = [
+    'Ash',
+    'Brock',
+    'Misty',
+  ];
+
+  return (
+    <section>
+      <h1>Temos {estudantes.length} alunos:</h1>
+      <ul>
+        <li>Ash</li>
+        <li>Brock</li>
+        <li>Misty</li>
+      </ul>
+    </section>
+  );
+}
+```
+
+```js 12:14
+function ListaDeEstudantes() {
+  const estudantes = [
+    'Ash',
+    'Brock',
+    'Misty',
+  ];
+
+  return (
+    <section>
+      <h1>Temos {estudantes.length} alunos:</h1>
+      <ul>
+        <li>Ash</li>
+        <li>Brock</li>
+        <li>Misty</li>
+      </ul>
+    </section>
+  );
+}
+```
+
+</CodeSurfer>
+
+---
+
+# Exercício
+
+- Construir list items dinamicamente baseado na variável `estudantes`
+- Receber lista de estudantes como props
+
+https://codesandbox.io/s/brave-chaum-rxqhcu?file=/src/App.js
+
+---
+
+<CodeSurfer>
+
+```js title="useState"
+function Contador() {
+  let count = 0;
+}
+```
+
+```js title="useState"
+function Contador() {
+  let count = 0;
+
+  return (
+    <span>Count: {count}</span>
+  );
+}
+```
+
+```js title="useState"
+function Contador() {
+  let count = 0;
+
+  return (
+    <div>
+      <span>Count: {count}</span><br/>
+      <button>Incrementa</button>
+    </div>
+  );
+}
+```
+
+```js title="useState"
+function Contador() {
+  let count = 0;
+
+  const incrementa = () => {
+    count++;
+  };
+
+  return (
+    <div>
+      <span>Count: {count}</span><br/>
+      <button>Incrementa</button>
+    </div>
+  );
+}
+```
+
+```js title="useState"
+function Contador() {
+  let count = 0;
+
+  const incrementa = () => {
+    count++;
+  };
+
+  return (
+    <div>
+      <span>Count: {count}</span><br/>
+      <button onClick={incrementa}>
+        Incrementa
+      </button>
+    </div>
+  );
+}
+```
+
+</CodeSurfer>
+
+---
+
+https://codesandbox.io/s/xenodochial-moon-cq0xt6?file=/src/App.js
+
+---
+
+<CodeSurfer>
+
+```js title="useState"
+function Contador() {
+  let count = 0;
+
+  const incrementa = () => {
+    count++;
+  };
+
+  return (
+    <div>
+      <span>Count: {count}</span><br/>
+      <button onClick={incrementa}>
+        Incrementa
+      </button>
+    </div>
+  );
+}
+```
+
+```js title="useState"
+import { useState } from 'react';
+
+function Contador() {
+  let count = 0;
+
+  const incrementa = () => {
+    count++;
+  };
+
+  return (
+    <div>
+      <span>Count: {count}</span><br/>
+      <button onClick={incrementa}>
+        Incrementa
+      </button>
+    </div>
+  );
+}
+```
+
+```js title="useState"
+import { useState } from 'react';
+
+function Contador() {
+  const [count, setCount] = useState(0);
+
+  const incrementa = () => {
+    count++;
+  };
+
+  return (
+    <div>
+      <span>Count: {count}</span><br/>
+      <button onClick={incrementa}>
+        Incrementa
+      </button>
+    </div>
+  );
+}
+```
+
+```js title="useState"
+import { useState } from 'react';
+
+function Contador() {
+  const [count, setCount] = useState(0);
+
+  const incrementa = () => {
+    setCount(count + 1);
+  };
+
+  return (
+    <div>
+      <span>Count: {count}</span><br/>
+      <button onClick={incrementa}>
+        Incrementa
+      </button>
+    </div>
+  );
+}
+```
+
+</CodeSurfer>
+
+---
+
+# Exercício
+
+<Block>
+  <li>Implementar função decrementar</li>
+  <li>Caso valor seja maior que 10, mostrar mensagem dizendo que está acima do permitido</li>
+  <li>Caso valor seja negativo, mostrar mensagem dizendo que valor está abaixo do permitido</li>
+</Block>
