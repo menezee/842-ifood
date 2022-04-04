@@ -1,0 +1,849 @@
+import {
+  CodeSurfer,
+  CodeSurferColumns,
+  Step,
+} from "code-surfer";
+
+import { future } from '@mdx-deck/themes';
+import { nightOwl, ultramin } from "@code-surfer/themes";
+
+export const theme = future;
+
+import { Block, Image } from './components';
+
+<Block>
+  <Block centralized>
+    <Image
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
+      height={300}
+      width={340}
+    />
+  </Block>
+  <section style={{ width: '60vw' }}>
+    <h3 style={{ textTransform: 'unset', fontSize: '1.8em' }}>children<br/>useEffect<br/>useRef</h3>
+  </section>
+</Block>
+
+---
+
+<CodeSurfer>
+
+```js title="children"
+function List(props) {
+  return (
+
+  );
+}
+```
+
+```js title="children"
+function List(props) {
+  return (
+    <ul>
+
+    </ul>
+  );
+}
+```
+
+```js title="children"
+function List(props) {
+  return (
+    <ul>
+      {
+        props.items.map()
+      }
+    </ul>
+  );
+}
+```
+
+```js title="children"
+function List(props) {
+  return (
+    <ul>
+      {
+        props.items.map(item => (
+          <li>{item}</li>
+        ))
+      }
+    </ul>
+  );
+}
+```
+
+```js title="children"
+function List(props) {
+  return (
+    <ul>
+      {
+
+      }
+    </ul>
+  );
+}
+```
+
+```js title="children"
+function List(props) {
+  return (
+    <ul>
+      {
+        children
+      }
+    </ul>
+  );
+}
+```
+
+```js title="children"
+function App(props) {
+  return (
+    <List children={} />
+  );
+}
+```
+
+```js title="children"
+function App(props) {
+  return (
+    <List children={[
+
+    ]} />
+  );
+}
+```
+
+```js title="children"
+function App(props) {
+  return (
+    <List children={[
+      <li>elemento 1</li>,
+      <li>elemento 2</li>,
+      <li>elemento 3</li>,
+    ]} />
+  );
+}
+```
+
+```js title="children"
+function App(props) {
+  return (
+    <List>
+      <li>elemento 1</li>
+      <li>elemento 2</li>
+      <li>elemento 3</li>
+    </List>
+  );
+}
+```
+
+```js title="children"
+function List(props) {
+  return (
+    <ul>
+      {
+        children
+      }
+    </ul>
+  );
+}
+```
+
+```js title="children"
+function List({ children }) {
+  return (
+    <ul>
+      {
+        children
+      }
+    </ul>
+  );
+}
+```
+
+```js title="children"
+import React from 'react';
+
+function List({ children }) {
+  return (
+    <ul>
+      {
+        children
+      }
+    </ul>
+  );
+}
+```
+
+```js title="children"
+import React from 'react';
+
+function List({ children }) {
+  return (
+    <ul>
+      {
+        React.Children.map()
+      }
+    </ul>
+  );
+}
+```
+
+```js title="children"
+import React from 'react';
+
+function List({ children }) {
+  return (
+    <ul>
+      {
+        React.Children.map(children, (child) => ())
+      }
+    </ul>
+  );
+}
+```
+
+```js title="children"
+import React from 'react';
+
+function List({ children }) {
+  return (
+    <ul>
+      {
+        React.Children.map(children, (child) => (
+          React.cloneElement()
+        ))
+      }
+    </ul>
+  );
+}
+```
+
+```js title="children"
+import React from 'react';
+
+function List({ children }) {
+  return (
+    <ul>
+      {
+        React.Children.map(children, (child) => (
+          React.cloneElement(child, { /* as coisas novas */ })
+        ))
+      }
+    </ul>
+  );
+}
+```
+
+```js title="children"
+import React from 'react';
+
+function List({ children }) {
+  return (
+    <ul>
+      {
+        React.Children.map(children, (child) => (
+          React.cloneElement(child, {
+            style: { color: 'red' }
+          })
+        ))
+      }
+    </ul>
+  );
+}
+```
+
+</CodeSurfer>
+
+---
+
+<Block>
+  <h1>Exercício</h1>
+
+  <Block centralized>
+    <ul>
+      <li>Criar um componente que renderiza um quadrado e como children deve receber o texto que vai mostrar</li>
+      <li>Renderizar o mesmo componente 3x, lado a lado, com textos diferentes</li>
+      <br/>
+    </ul>
+  </Block>
+</Block>
+
+---
+
+# useEffect
+
+---
+
+<CodeSurfer>
+
+```js title="useEffect"
+function App() {
+
+}
+```
+
+```js title="useEffect"
+import { useEffect } from 'react';
+
+function App() {
+
+}
+```
+
+```js title="useEffect"
+import { useEffect } from 'react';
+
+function App() {
+  useEffect(() => {
+
+  }, []);
+}
+```
+
+```js title="useEffect"
+import { useEffect } from 'react';
+
+function App() {
+  useEffect(() => {
+
+  }, [deps]);
+}
+```
+
+```js title="useEffect"
+import { useEffect } from 'react';
+
+function App() {
+  useEffect(() => {
+    // faz algo qndo deps muda
+  }, [deps]);
+}
+```
+
+```js title="useEffect"
+import { useEffect, useState } from 'react';
+
+function App() {
+  useEffect(() => {
+    // faz algo qndo deps muda
+  }, [deps]);
+}
+```
+
+```js title="useEffect"
+import { useEffect, useState } from 'react';
+
+function App() {
+  const [nome, setNome] = useState('');
+
+  useEffect(() => {
+    // faz algo qndo deps muda
+  }, [deps]);
+}
+```
+
+```js title="useEffect"
+import { useEffect, useState } from 'react';
+
+function App() {
+  const [nome, setNome] = useState('');
+
+  useEffect(() => {
+    // faz algo qndo deps muda
+  }, [nome]);
+}
+```
+
+```js title="useEffect"
+import { useEffect, useState } from 'react';
+
+function App() {
+  const [nome, setNome] = useState('');
+
+  useEffect(() => {
+    console.log('nome mudou!');
+  }, [nome]);
+}
+```
+
+```js title="useEffect"
+import { useEffect, useState } from 'react';
+
+function App() {
+  const [nome, setNome] = useState('');
+
+  useEffect(() => {
+    console.log('nome mudou!');
+  }, [nome]);
+
+  return (
+    <>
+    </>
+  );
+}
+```
+
+```js title="useEffect"
+import { useEffect, useState } from 'react';
+
+function App() {
+  const [id, setId] = useState(1);
+
+  useEffect(() => {
+    console.log('nome mudou!');
+  }, [nome]);
+
+  return (
+    <>
+    </>
+  );
+}
+```
+
+```js title="useEffect"
+import { useEffect, useState } from 'react';
+
+function App() {
+  const [pokemon, setPokemon] = useState(null);
+  const [id, setId] = useState(1);
+
+  useEffect(() => {
+    console.log('nome mudou!');
+  }, [nome]);
+
+  return (
+    <>
+    </>
+  );
+}
+```
+
+```js title="useEffect"
+import { useEffect, useState } from 'react';
+
+function App() {
+  const [pokemon, setPokemon] = useState(null);
+  const [id, setId] = useState(1);
+
+  useEffect(() => {
+    console.log('nome mudou!');
+  }, [nome]);
+
+  return (
+    <>
+      {pokemon !== null && <h1>{pokemon}</h1>}
+    </>
+  );
+}
+```
+
+```js title="useEffect"
+import { useEffect, useState } from 'react';
+
+function App() {
+  const [pokemon, setPokemon] = useState(null);
+  const [id, setId] = useState(1);
+
+  useEffect(() => {
+    console.log('nome mudou!');
+  }, [nome]);
+
+  return (
+    <>
+      {pokemon !== null && <h1>{pokemon}</h1>}
+      <input
+        placeholder='pokemon id'
+      />
+    </>
+  );
+}
+```
+
+```js title="useEffect"
+import { useEffect, useState } from 'react';
+
+function App() {
+  const [pokemon, setPokemon] = useState(null);
+  const [id, setId] = useState(1);
+
+  useEffect(() => {
+    console.log('nome mudou!');
+  }, [nome]);
+
+  return (
+    <>
+      {pokemon !== null && <h1>{pokemon}</h1>}
+      <input
+        placeholder='pokemon id'
+        type='number'
+      />
+    </>
+  );
+}
+```
+
+```js title="useEffect"
+import { useEffect, useState } from 'react';
+
+function App() {
+  const [pokemon, setPokemon] = useState(null);
+  const [id, setId] = useState(1);
+
+  useEffect(() => {
+    console.log('nome mudou!');
+  }, [nome]);
+
+  return (
+    <>
+      {pokemon !== null && <h1>{pokemon}</h1>}
+      <input
+        placeholder='pokemon id'
+        type='number'
+        onChange={}
+      />
+    </>
+  );
+}
+```
+
+```js title="useEffect"
+import { useEffect, useState } from 'react';
+
+function App() {
+  const [pokemon, setPokemon] = useState(null);
+  const [id, setId] = useState(1);
+
+  useEffect(() => {
+    console.log('nome mudou!');
+  }, [nome]);
+
+  return (
+    <>
+      {pokemon !== null && <h1>{pokemon}</h1>}
+      <input
+        placeholder='pokemon id'
+        type='number'
+        onChange={e => setId(e.target.value)}
+      />
+    </>
+  );
+}
+```
+
+```js title="useEffect"
+import { useEffect, useState } from 'react';
+
+function App() {
+  const [pokemon, setPokemon] = useState(null);
+  const [id, setId] = useState(1);
+
+  useEffect(() => {
+
+  }, [id]);
+
+  return (
+    <>
+      {pokemon !== null && <h1>{pokemon}</h1>}
+      <input
+        placeholder='pokemon id'
+        type='number'
+        onChange={e => setId(e.target.value)}
+      />
+    </>
+  );
+}
+```
+
+```js title="useEffect"
+import { useEffect, useState } from 'react';
+
+function App() {
+  const [pokemon, setPokemon] = useState(null);
+  const [id, setId] = useState(1);
+
+  useEffect(() => {
+    fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
+  }, [id]);
+
+  return (
+    <>
+      {pokemon !== null && <h1>{pokemon}</h1>}
+      <input
+        placeholder='pokemon id'
+        type='number'
+        onChange={e => setId(e.target.value)}
+      />
+    </>
+  );
+}
+```
+
+```js title="useEffect"
+import { useEffect, useState } from 'react';
+
+function App() {
+  const [pokemon, setPokemon] = useState(null);
+  const [id, setId] = useState(1);
+
+  useEffect(() => {
+    fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
+      .then(res => res.json())
+      .then(poke => setPokemon(poke.name));
+  }, [id]);
+
+  return (
+    <>
+      {pokemon !== null && <h1>{pokemon}</h1>}
+      <input
+        placeholder='pokemon id'
+        type='number'
+        onChange={e => setId(e.target.value)}
+      />
+    </>
+  );
+}
+```
+
+</CodeSurfer>
+
+---
+
+<Block>
+
+  <h1>Exercício</h1>
+  <Block centralized>
+    <ul>
+      <li>Criar um h1 e um input</li>
+      <li>O h1 tem que renderizar o valor do input</li>
+      <li>Caso usuário digite Clark Kent, mostrar Super Homem ao invés de Clark Kent</li>
+      <li><a href="https://qq0frm.csb.app/">https://qq0frm.csb.app/</a></li>
+    </ul>
+  </Block>
+</Block>
+
+---
+
+# useRef
+
+---
+
+<CodeSurfer>
+
+```js title="useRef"
+function App() {
+  return (
+    <main>
+
+    </main>
+  );
+}
+```
+
+```js title="useRef"
+import { useRef } from 'react';
+
+function App() {
+  return (
+    <main>
+
+    </main>
+  );
+}
+```
+
+```js title="useRef"
+import { useRef } from 'react';
+
+function App() {
+  const buttonRef = useRef(null);
+
+  return (
+    <main>
+
+    </main>
+  );
+}
+```
+
+```js title="useRef"
+import { useRef } from 'react';
+
+function App() {
+  const buttonRef = useRef(null);
+
+  return (
+    <main>
+      <button>Botão</button>
+    </main>
+  );
+}
+```
+
+```js title="useRef"
+import { useRef } from 'react';
+
+function App() {
+  const buttonRef = useRef(null);
+
+  return (
+    <main>
+      <button ref={buttonRef}>Botão</button>
+    </main>
+  );
+}
+```
+
+```js title="useRef"
+import { useRef, useEffect } from 'react';
+
+function App() {
+  const buttonRef = useRef(null);
+
+  useEffect(() => {
+
+  }, []);
+
+  return (
+    <main>
+      <button ref={buttonRef}>Botão</button>
+    </main>
+  );
+}
+```
+
+```js title="useRef"
+import { useRef, useEffect, useState } from 'react';
+
+function App() {
+  const buttonRef = useRef(null);
+  const [value, setValue] = useState('');
+
+  useEffect(() => {
+
+  }, []);
+
+  return (
+    <main>
+      <button ref={buttonRef}>Botão</button>
+    </main>
+  );
+}
+```
+
+```js title="useRef"
+import { useRef, useEffect, useState } from 'react';
+
+function App() {
+  const buttonRef = useRef(null);
+  const [value, setValue] = useState('');
+
+  useEffect(() => {
+
+  }, [value]);
+
+  return (
+    <main>
+      <button ref={buttonRef}>Botão</button>
+    </main>
+  );
+}
+```
+
+```js title="useRef"
+import { useRef, useEffect, useState } from 'react';
+
+function App() {
+  const buttonRef = useRef(null);
+  const [value, setValue] = useState('');
+
+  useEffect(() => {
+
+  }, [value]);
+
+  return (
+    <main>
+      <input onChange={e => setValue(e.target.value)} />
+      <button ref={buttonRef}>Botão</button>
+    </main>
+  );
+}
+```
+
+```js title="useRef"
+import { useRef, useEffect, useState } from 'react';
+
+function App() {
+  const buttonRef = useRef(null);
+  const [value, setValue] = useState('');
+
+  useEffect(() => {
+    if (value === 'alertar') {
+
+    }
+  }, [value]);
+
+  return (
+    <main>
+      <input onChange={e => setValue(e.target.value)} />
+      <button ref={buttonRef}>Botão</button>
+    </main>
+  );
+}
+```
+
+```js title="useRef"
+import { useRef, useEffect, useState } from 'react';
+
+function App() {
+  const buttonRef = useRef(null);
+  const [value, setValue] = useState('');
+
+  useEffect(() => {
+    if (value === 'alertar') {
+      buttonRef.current.click();
+    }
+  }, [value]);
+
+  return (
+    <main>
+      <input onChange={e => setValue(e.target.value)} />
+      <button ref={buttonRef}>Botão</button>
+    </main>
+  );
+}
+```
+
+```js title="useRef"
+import { useRef, useEffect, useState } from 'react';
+
+function App() {
+  const buttonRef = useRef(null);
+  const [value, setValue] = useState('');
+
+  useEffect(() => {
+    if (value === 'alertar') {
+      buttonRef.current.click();
+    }
+  }, [value]);
+
+  return (
+    <main>
+      <input onChange={e => setValue(e.target.value)} />
+      <button onClick={() => {alert('ALERTA!!!')}} ref={buttonRef}>Botão</button>
+    </main>
+  );
+}
+```
+
+</CodeSurfer>
+
+---
+
+# Exercício
+
+- Criar tela para inserir token
+
+
+https://m498vq.csb.app/
