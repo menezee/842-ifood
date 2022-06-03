@@ -1,0 +1,14 @@
+<ementa>
+  <modulo>
+    <nome>TÉCNICAS DE PROGRAMAÇÃO I (nodejs)</nome>
+    <duracao>9</duracao>
+    <descricao>intro aos principais conceitos de nodejs</descricao>
+    <turno>noite</turno>
+  </modulo>
+  <modulo>
+    <nome>PROGRAMAÇÃO WEB III</nome>
+    <duracao>9</duracao>
+    <descricao>intro aos principais conceitos de web</descricao>
+    <turno>noite</turno>
+  </modulo>
+</ementa>

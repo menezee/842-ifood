@@ -31,7 +31,24 @@ function Image({ src, height, width }) {
   );
 }
 
+function Square({ children }) {
+  return (
+    <div style={{
+      minHeight: '150px',
+      height: 'fit-content',
+      width: '150px',
+      border: '1.5px solid black',
+      overflow: 'hidden',
+      padding: '2px',
+      fontFamily: 'Georgia'
+    }}>
+      {children}
+    </div>
+  );
+}
+
 export {
   Block,
   Image,
+  Square,
 };

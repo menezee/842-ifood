@@ -1,0 +1,1745 @@
+import {
+  CodeSurfer,
+  CodeSurferColumns,
+  Step,
+} from "code-surfer";
+
+import { future } from '@mdx-deck/themes';
+import { nightOwl, ultramin } from "@code-surfer/themes";
+
+export const theme = future;
+
+import { Block, Image } from './components';
+
+<Block>
+  <Block centralized>
+    <span style={{ fontSize: '100px', textAlign: 'center', lineHeight: '120px' }}>
+      Como construir <br/>
+      <span style={{ fontSize: '140px' }}>aplicações </span><br/>
+      <span style={{ fontSize: '180px' }}>orientadas a </span><br/>
+      <span style={{ fontSize: '220px', color: 'greenyellow' }}>serviços</span>
+    </span>
+  </Block>
+  <section style={{ width: '60vw', paddingTop: '80px' }}>
+    <h3 style={{ textTransform: 'unset', fontSize: '1.2em' }}>Programação Web III</h3>
+  </section>
+</Block>
+
+---
+
+<Block centralized>
+  <Image
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
+    height={300}
+    width={340}
+  />
+</Block>
+
+---
+
+<div style={{ display: 'flex', justifyContent: 'space-between', width: '60vw' }}>
+  <img
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
+    style={{ height: '150px', width: '170px' }}
+  />
+</div>
+
+---
+
+<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '60vw' }}>
+  <img
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
+    style={{ height: '150px', width: '170px' }}
+  />
+  <img
+    src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg"
+    style={{ height: '280px', width: '480px', position: 'fixed', left: '50%', transform: 'translate(-50%, 0)' }}
+  />
+</div>
+
+---
+
+<div style={{ display: 'flex', justifyContent: 'space-between', width: '60vw' }}>
+  <img
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
+    style={{ height: '150px', width: '170px' }}
+  />
+  <img
+    src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg"
+    style={{ height: '150px', width: '250px' }}
+  />
+</div>
+
+---
+
+<div style={{ display: 'flex', justifyContent: 'space-between', width: '60vw' }}>
+  <img
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
+    style={{ height: '150px', width: '170px' }}
+  />
+  <img
+    src="https://i.pinimg.com/originals/8f/6e/65/8f6e6534617dcdc81ace386e4b6905a1.png"
+    style={{ height: '150px', width: '251px' }}
+  />
+  <img
+    src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg"
+    style={{ height: '150px', width: '250px' }}
+  />
+</div>
+
+---
+
+<div style={{ display: 'flex', justifyContent: 'space-evenly', width: '60vw' }}>
+  <img
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
+    style={{ height: '150px', width: '170px' }}
+  />
+  <img
+    src="https://i.pinimg.com/originals/8f/6e/65/8f6e6534617dcdc81ace386e4b6905a1.png"
+    style={{ height: '150px', width: '251px' }}
+  />
+  <img
+    src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.svg"
+    style={{ height: '150px', width: '250px' }}
+  />
+</div>
+
+---
+
+<Block>
+  <h1>Cliente-Servidor</h1>
+</Block>
+
+---
+
+<Block>
+  <h2>Cliente</h2>
+  <p>
+    Máquina que se comunica com o servidor.<br/>
+    Envia dados e faz consultas.
+  </p>
+</Block>
+
+---
+
+<Block>
+  <h2>Servidor</h2>
+  <p>
+    Máquina que espera a comunicação do cliente<br/>
+    para retornar dados.
+  </p>
+</Block>
+
+---
+
+<Block>
+  <h2>Exemplo</h2>
+  <Block centralized>
+    <ul>
+      <li>Navegador acessa um site</li>
+      <li style="opacity: 0.1;">Faz uma busca de DNS para resolver o endereço em IP</li>
+      <li style="opacity: 0.1;">Tipo especial de requisição para servidores que respondem o IP dado um endereço</li>
+      <li style="opacity: 0.1;">e.g. letscode.com.br → 54.94.185.142</li>
+      <li style="opacity: 0.1;">Envia a requisição para o endereço IP do servidor</li>
+      <li style="opacity: 0.1;">Servidor recebe a requisição</li>
+      <li style="opacity: 0.1;">Processa, e.g. consulta em banco de dados</li>
+      <li style="opacity: 0.1;">Retorna um documento HTML</li>
+      <li style="opacity: 0.1;">Navegador recebe a resposta e renderiza a página</li>
+    </ul>
+  </Block>
+</Block>
+
+---
+
+<Block>
+  <h2>Exemplo</h2>
+  <Block centralized>
+    <ul>
+      <li style="opacity: 0.1;">Navegador acessa um site</li>
+      <li>Faz uma busca de DNS para resolver o endereço em IP</li>
+      <li style="opacity: 0.1;">Tipo especial de requisição para servidores que respondem o IP dado um endereço</li>
+      <li style="opacity: 0.1;">e.g. letscode.com.br → 54.94.185.142</li>
+      <li style="opacity: 0.1;">Envia a requisição para o endereço IP do servidor</li>
+      <li style="opacity: 0.1;">Servidor recebe a requisição</li>
+      <li style="opacity: 0.1;">Processa, e.g. consulta em banco de dados</li>
+      <li style="opacity: 0.1;">Retorna um documento HTML</li>
+      <li style="opacity: 0.1;">Navegador recebe a resposta e renderiza a página</li>
+    </ul>
+  </Block>
+</Block>
+
+---
+
+<Block>
+  <h2>Exemplo</h2>
+  <Block centralized>
+    <ul>
+      <li style="opacity: 0.1;">Navegador acessa um site</li>
+      <li style="opacity: 0.1;">Faz uma busca de DNS para resolver o endereço em IP</li>
+      <li>Tipo especial de requisição para servidores que respondem o IP dado um endereço</li>
+      <li style="opacity: 0.1;">e.g. letscode.com.br → 54.94.185.142</li>
+      <li style="opacity: 0.1;">Envia a requisição para o endereço IP do servidor</li>
+      <li style="opacity: 0.1;">Servidor recebe a requisição</li>
+      <li style="opacity: 0.1;">Processa, e.g. consulta em banco de dados</li>
+      <li style="opacity: 0.1;">Retorna um documento HTML</li>
+      <li style="opacity: 0.1;">Navegador recebe a resposta e renderiza a página</li>
+    </ul>
+  </Block>
+</Block>
+
+---
+
+<Block>
+  <h2>Exemplo</h2>
+  <Block centralized>
+    <ul>
+      <li style="opacity: 0.1;">Navegador acessa um site</li>
+      <li style="opacity: 0.1;">Faz uma busca de DNS para resolver o endereço em IP</li>
+      <li style="opacity: 0.1;">Tipo especial de requisição para servidores que respondem o IP dado um endereço</li>
+      <li>e.g. letscode.com.br → 54.94.185.142</li>
+      <li style="opacity: 0.1;">Envia a requisição para o endereço IP do servidor</li>
+      <li style="opacity: 0.1;">Servidor recebe a requisição</li>
+      <li style="opacity: 0.1;">Processa, e.g. consulta em banco de dados</li>
+      <li style="opacity: 0.1;">Retorna um documento HTML</li>
+      <li style="opacity: 0.1;">Navegador recebe a resposta e renderiza a página</li>
+    </ul>
+  </Block>
+</Block>
+
+---
+
+<Block>
+  <h1>Endereço de IP</h1>
+  <p>
+    Identificar único dado por uma entidade - GCP, AWS - para uma máquina na internet
+  </p>
+</Block>
+
+---
+
+<Block>
+  <h2>Exemplo</h2>
+  <Block centralized>
+    <ul>
+      <li style="opacity: 0.1;">Navegador acessa um site</li>
+      <li style="opacity: 0.1;">Faz uma busca de DNS para resolver o endereço em IP</li>
+      <li style="opacity: 0.1;">Tipo especial de requisição para servidores que respondem o IP dado um endereço</li>
+      <li style="opacity: 0.1;">e.g. letscode.com.br → 54.94.185.142</li>
+      <li>Envia a requisição para o endereço IP do servidor</li>
+      <li style="opacity: 0.1;">Servidor recebe a requisição</li>
+      <li style="opacity: 0.1;">Processa, e.g. consulta em banco de dados</li>
+      <li style="opacity: 0.1;">Retorna um documento HTML</li>
+      <li style="opacity: 0.1;">Navegador recebe a resposta e renderiza a página</li>
+    </ul>
+  </Block>
+</Block>
+
+---
+
+<Block>
+  <h2>Exemplo</h2>
+  <Block centralized>
+    <ul>
+      <li style="opacity: 0.1;">Navegador acessa um site</li>
+      <li style="opacity: 0.1;">Faz uma busca de DNS para resolver o endereço em IP</li>
+      <li style="opacity: 0.1;">Tipo especial de requisição para servidores que respondem o IP dado um endereço</li>
+      <li style="opacity: 0.1;">e.g. letscode.com.br → 54.94.185.142</li>
+      <li style="opacity: 0.1;">Envia a requisição para o endereço IP do servidor</li>
+      <li>Servidor recebe a requisição</li>
+      <li style="opacity: 0.1;">Processa, e.g. consulta em banco de dados</li>
+      <li style="opacity: 0.1;">Retorna um documento HTML</li>
+      <li style="opacity: 0.1;">Navegador recebe a resposta e renderiza a página</li>
+    </ul>
+  </Block>
+</Block>
+
+---
+
+<Block>
+  <h2>Exemplo</h2>
+  <Block centralized>
+    <ul>
+      <li style="opacity: 0.1;">Navegador acessa um site</li>
+      <li style="opacity: 0.1;">Faz uma busca de DNS para resolver o endereço em IP</li>
+      <li style="opacity: 0.1;">Tipo especial de requisição para servidores que respondem o IP dado um endereço</li>
+      <li style="opacity: 0.1;">e.g. letscode.com.br → 54.94.185.142</li>
+      <li style="opacity: 0.1;">Envia a requisição para o endereço IP do servidor</li>
+      <li style="opacity: 0.1;">Servidor recebe a requisição</li>
+      <li>Processa, e.g. consulta em banco de dados</li>
+      <li style="opacity: 0.1;">Retorna um documento HTML</li>
+      <li style="opacity: 0.1;">Navegador recebe a resposta e renderiza a página</li>
+    </ul>
+  </Block>
+</Block>
+
+---
+
+<Block>
+  <h2>Exemplo</h2>
+  <Block centralized>
+    <ul>
+      <li style="opacity: 0.1;">Navegador acessa um site</li>
+      <li style="opacity: 0.1;">Faz uma busca de DNS para resolver o endereço em IP</li>
+      <li style="opacity: 0.1;">Tipo especial de requisição para servidores que respondem o IP dado um endereço</li>
+      <li style="opacity: 0.1;">e.g. letscode.com.br → 54.94.185.142</li>
+      <li style="opacity: 0.1;">Envia a requisição para o endereço IP do servidor</li>
+      <li style="opacity: 0.1;">Servidor recebe a requisição</li>
+      <li style="opacity: 0.1;">Processa, e.g. consulta em banco de dados</li>
+      <li>Retorna um documento HTML</li>
+      <li style="opacity: 0.1;">Navegador recebe a resposta e renderiza a página</li>
+    </ul>
+  </Block>
+</Block>
+
+---
+
+<Block>
+  <h2>Exemplo</h2>
+  <Block centralized>
+    <ul>
+      <li style="opacity: 0.1;">Navegador acessa um site</li>
+      <li style="opacity: 0.1;">Faz uma busca de DNS para resolver o endereço em IP</li>
+      <li style="opacity: 0.1;">Tipo especial de requisição para servidores que respondem o IP dado um endereço</li>
+      <li style="opacity: 0.1;">e.g. letscode.com.br → 54.94.185.142</li>
+      <li style="opacity: 0.1;">Envia a requisição para o endereço IP do servidor</li>
+      <li style="opacity: 0.1;">Servidor recebe a requisição</li>
+      <li style="opacity: 0.1;">Processa, e.g. consulta em banco de dados</li>
+      <li style="opacity: 0.1;">Retorna um documento HTML</li>
+      <li>Navegador recebe a resposta e renderiza a página</li>
+    </ul>
+  </Block>
+</Block>
+
+---
+
+<Block>
+  <h2>Exemplo</h2>
+  <Block centralized>
+    <ul>
+      <li>Navegador acessa um site</li>
+      <li>Faz uma busca de DNS para resolver o endereço em IP</li>
+      <li>Tipo especial de requisição para servidores que respondem o IP dado um endereço</li>
+      <li>e.g. letscode.com.br → 54.94.185.142</li>
+      <li>Envia a requisição para o endereço IP do servidor</li>
+      <li>Servidor recebe a requisição</li>
+      <li>Processa, e.g. consulta em banco de dados</li>
+      <li>Retorna um documento HTML</li>
+      <li>Navegador recebe a resposta e renderiza a página</li>
+    </ul>
+  </Block>
+</Block>
+
+---
+
+<Block>
+  <ol>
+    <li>Cliente se comunica com o servidor através de HTTP</li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <ol>
+    <li style="opacity: 0.3;">Cliente se comunica com o servidor através de HTTP</li>
+    <li>HTTP é um jeito de enviar informaçōes que o servidor consegue entender</li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <ol>
+    <li style="opacity: 0.3;">Cliente se comunica com o servidor através de HTTP</li>
+    <li style="opacity: 0.3;">HTTP é um jeito de enviar informaçōes que o servidor consegue entender</li>
+    <li>Requisição é enviada dentro de um pacote de dados com informaçōes do cliente</li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <ol>
+    <li style="opacity: 0.3;">Cliente se comunica com o servidor através de HTTP</li>
+    <li style="opacity: 0.3;">HTTP é um jeito de enviar informaçōes que o servidor consegue entender</li>
+    <li style="opacity: 0.3;">Requisição é enviada dentro de um pacote de dados com informaçōes do cliente</li>
+    <li>Servidor sabe para quem responder baseado na identificação do cliente</li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <ol>
+    <li style="opacity: 0.3;">Cliente se comunica com o servidor através de HTTP</li>
+    <li style="opacity: 0.3;">HTTP é um jeito de enviar informaçōes que o servidor consegue entender</li>
+    <li style="opacity: 0.3;">Requisição é enviada dentro de um pacote de dados com informaçōes do cliente</li>
+    <li style="opacity: 0.3;">Servidor sabe para quem responder baseado na identificação do cliente</li>
+    <li>Servidores escutam em portas específicas</li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <ol>
+    <li style="opacity: 0.3;">Cliente se comunica com o servidor através de HTTP</li>
+    <li style="opacity: 0.3;">HTTP é um jeito de enviar informaçōes que o servidor consegue entender</li>
+    <li style="opacity: 0.3;">Requisição é enviada dentro de um pacote de dados com informaçōes do cliente</li>
+    <li style="opacity: 0.3;">Servidor sabe para quem responder baseado na identificação do cliente</li>
+    <li>Servidores escutam em portas específicas</li>
+    <li>Podemos pensar que o IP seria o endereço - rua, bairro - do servidor e a porta seria o apartamento</li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <h1>Por convenção:</h1>
+  <span style={{ color: 'brown' }}>HTTP → :80</span><br/>
+  <span style={{ color: 'mediumspringgreen' }}>HTTP → :443</span><br/>
+  <span style={{ color: 'gold' }}>127.0.0.1 é um IP especial que aponta para a máquina local</span>
+
+</Block>
+
+---
+
+<Block>
+  <h1>Se estiver em Unix:</h1>
+  <span>netcat vai abrir uma conexão TCP na porta especificada</span><br/><br/>
+  <span>um terminal ouvindo na porta 3001</span>
+  <pre style={{ margin: 0 }}>
+    nc -l 8081
+  </pre>
+  <br/>
+  <span>em outro terminal vamos conectar e enviar dados</span>
+  <pre style={{ margin: 0 }}>
+    nc 127.0.0.1 8081
+  </pre>
+</Block>
+
+---
+
+<Block>
+  <h2>cURL e dig</h2>
+  <ol>
+    <li>dig letscode.com.br</li>
+    <li>curl (ip retornado de cima)</li>
+    <li>-i incluir headers da resposta</li>
+    <li>-L, --location para seguir os redirects</li>
+    <li>-k ignora verificação de SSL</li>
+  </ol>
+</Block>
+
+---
+
+<Block centralized>
+  <span style={{ fontSize: '100px', textAlign: 'center' }}>Introdução a arquitetura de aplicações orientadas a serviços</span>
+</Block>
+
+---
+
+<Block>
+  <h1>Características</h1>
+  <ol>
+    <li>Um serviço web pode lidar com
+      <ol>
+        <li style="opacity: 0.1;">Casos de negócio, e.g. calcular preço de um lancho</li>
+        <li style="opacity: 0.1;">Enviar comunicação, e.g. e-mail, SMS, sinal de fumaça</li>
+        <li style="opacity: 0.1;">Acessar um banco de dados</li>
+        <li style="opacity: 0.1;">Retornar dados sobre um Pokémon</li>
+      </ol>
+    </li>
+    <li style="opacity: 0.1;">Um serviço pode ser cliente de outros serviços</li>
+    <li style="opacity: 0.1;">Baixo acoplamento</li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <h1>Características</h1>
+  <ol>
+    <li>Um serviço web pode lidar com
+      <ol>
+        <li>Casos de negócio, e.g. calcular preço de um lancho</li>
+        <li style="opacity: 0.1;">Enviar comunicação, e.g. e-mail, SMS, sinal de fumaça</li>
+        <li style="opacity: 0.1;">Acessar um banco de dados</li>
+        <li style="opacity: 0.1;">Retornar dados sobre um Pokémon</li>
+      </ol>
+    </li>
+    <li style="opacity: 0.1;">Um serviço pode ser cliente de outros serviços</li>
+    <li style="opacity: 0.1;">Baixo acoplamento</li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <h1>Características</h1>
+  <ol>
+    <li>Um serviço web pode lidar com
+      <ol>
+        <li style="opacity: 0.1;">Casos de negócio, e.g. calcular preço de um lancho</li>
+        <li>Enviar comunicação, e.g. e-mail, SMS, sinal de fumaça</li>
+        <li style="opacity: 0.1;">Acessar um banco de dados</li>
+        <li style="opacity: 0.1;">Retornar dados sobre um Pokémon</li>
+      </ol>
+    </li>
+    <li style="opacity: 0.1;">Um serviço pode ser cliente de outros serviços</li>
+    <li style="opacity: 0.1;">Baixo acoplamento</li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <h1>Características</h1>
+  <ol>
+    <li>Um serviço web pode lidar com
+      <ol>
+        <li style="opacity: 0.1;">Casos de negócio, e.g. calcular preço de um lancho</li>
+        <li style="opacity: 0.1;">Enviar comunicação, e.g. e-mail, SMS, sinal de fumaça</li>
+        <li>Acessar um banco de dados</li>
+        <li style="opacity: 0.1;">Retornar dados sobre um Pokémon</li>
+      </ol>
+    </li>
+    <li style="opacity: 0.1;">Um serviço pode ser cliente de outros serviços</li>
+    <li style="opacity: 0.1;">Baixo acoplamento</li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <h1>Características</h1>
+  <ol>
+    <li>Um serviço web pode lidar com
+      <ol>
+        <li style="opacity: 0.1;">Casos de negócio, e.g. calcular preço de um lancho</li>
+        <li style="opacity: 0.1;">Enviar comunicação, e.g. e-mail, SMS, sinal de fumaça</li>
+        <li style="opacity: 0.1;">Acessar um banco de dados</li>
+        <li>Retornar dados sobre um Pokémon</li>
+      </ol>
+    </li>
+    <li style="opacity: 0.1;">Um serviço pode ser cliente de outros serviços</li>
+    <li style="opacity: 0.1;">Baixo acoplamento</li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <h1>Características</h1>
+  <ol>
+    <li>Um serviço web pode lidar com
+      <ol>
+        <li style="opacity: 0.1;">Casos de negócio, e.g. calcular preço de um lancho</li>
+        <li style="opacity: 0.1;">Enviar comunicação, e.g. e-mail, SMS, sinal de fumaça</li>
+        <li style="opacity: 0.1;">Acessar um banco de dados</li>
+        <li style="opacity: 0.1;">Retornar dados sobre um Pokémon</li>
+      </ol>
+    </li>
+    <li>Um serviço pode ser cliente de outros serviços</li>
+    <li style="opacity: 0.1;">Baixo acoplamento</li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <h1>Características</h1>
+  <ol>
+    <li>Um serviço web pode lidar com
+      <ol>
+        <li style="opacity: 0.1;">Casos de negócio, e.g. calcular preço de um lancho</li>
+        <li style="opacity: 0.1;">Enviar comunicação, e.g. e-mail, SMS, sinal de fumaça</li>
+        <li style="opacity: 0.1;">Acessar um banco de dados</li>
+        <li style="opacity: 0.1;">Retornar dados sobre um Pokémon</li>
+      </ol>
+    </li>
+    <li style="opacity: 0.1;">Um serviço pode ser cliente de outros serviços</li>
+    <li>Baixo acoplamento</li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <h1 style={{ marginTop: 'unset' }}>Características</h1>
+  <ol>
+    <li>
+      Pode ter algum nível de hierarquia
+      <ol>
+        <li style="opacity: 0.1;">Acesso a banco de dados</li>
+        <li style="opacity: 0.1;">Serviços expostos para GUI</li>
+        <li style="opacity: 0.1;">Orquestrador de serviços</li>
+      </ol>
+    </li>
+    <li style="opacity: 0.1;">
+      Se comunicam através de HTTP
+      <ol>
+        <li>Método HTTP</li>
+        <li>Headers relacionados a metadados da mensagem e do cliente</li>
+        <li>Mensagem em formato de texto</li>
+        <li>Código de status HTTP</li>
+      </ol>
+    </li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <h1 style={{ marginTop: 'unset' }}>Características</h1>
+  <ol>
+    <li>
+      Pode ter algum nível de hierarquia
+      <ol>
+        <li>Acesso a banco de dados</li>
+        <li style="opacity: 0.1;">Serviços expostos para GUI</li>
+        <li style="opacity: 0.1;">Orquestrador de serviços</li>
+      </ol>
+    </li>
+    <li style="opacity: 0.1;">
+      Se comunicam através de HTTP
+      <ol>
+        <li>Método HTTP</li>
+        <li>Headers relacionados a metadados da mensagem e do cliente</li>
+        <li>Mensagem em formato de texto</li>
+        <li>Código de status HTTP</li>
+      </ol>
+    </li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <h1 style={{ marginTop: 'unset' }}>Características</h1>
+  <ol>
+    <li>
+      Pode ter algum nível de hierarquia
+      <ol>
+        <li style="opacity: 0.1;">Acesso a banco de dados</li>
+        <li>Serviços expostos para GUI</li>
+        <li style="opacity: 0.1;">Orquestrador de serviços</li>
+      </ol>
+    </li>
+    <li style="opacity: 0.1;">
+      Se comunicam através de HTTP
+      <ol>
+        <li>Método HTTP</li>
+        <li>Headers relacionados a metadados da mensagem e do cliente</li>
+        <li>Mensagem em formato de texto</li>
+        <li>Código de status HTTP</li>
+      </ol>
+    </li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <h1 style={{ marginTop: 'unset' }}>Características</h1>
+  <ol>
+    <li>
+      Pode ter algum nível de hierarquia
+      <ol>
+        <li style="opacity: 0.1;">Acesso a banco de dados</li>
+        <li style="opacity: 0.1;">Serviços expostos para GUI</li>
+        <li>Orquestrador de serviços</li>
+      </ol>
+    </li>
+    <li style="opacity: 0.1;">
+      Se comunicam através de HTTP
+      <ol>
+        <li>Método HTTP</li>
+        <li>Headers relacionados a metadados da mensagem e do cliente</li>
+        <li>Mensagem em formato de texto</li>
+        <li>Código de status HTTP</li>
+      </ol>
+    </li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <h1 style={{ marginTop: 'unset' }}>Características</h1>
+  <ol>
+    <li style="opacity: 0.1;">
+      Pode ter algum nível de hierarquia
+      <ol>
+        <li>Acesso a banco de dados</li>
+        <li>Serviços expostos para GUI</li>
+        <li>Orquestrador de serviços</li>
+      </ol>
+    </li>
+    <li>
+      Se comunicam através de HTTP
+      <ol>
+        <li style="opacity: 0.1;">Método HTTP</li>
+        <li style="opacity: 0.1;">Headers relacionados a metadados da mensagem e do cliente</li>
+        <li style="opacity: 0.1;">Mensagem em formato de texto</li>
+        <li style="opacity: 0.1;">Código de status HTTP</li>
+      </ol>
+    </li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <h1 style={{ marginTop: 'unset' }}>Características</h1>
+  <ol>
+    <li style="opacity: 0.1;">
+      Pode ter algum nível de hierarquia
+      <ol>
+        <li>Acesso a banco de dados</li>
+        <li>Serviços expostos para GUI</li>
+        <li>Orquestrador de serviços</li>
+      </ol>
+    </li>
+    <li>
+      Se comunicam através de HTTP
+      <ol>
+        <li>Método HTTP</li>
+        <li style="opacity: 0.1;">Headers relacionados a metadados da mensagem e do cliente</li>
+        <li style="opacity: 0.1;">Mensagem em formato de texto</li>
+        <li style="opacity: 0.1;">Código de status HTTP</li>
+      </ol>
+    </li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <h1 style={{ marginTop: 'unset' }}>Características</h1>
+  <ol>
+    <li style="opacity: 0.1;">
+      Pode ter algum nível de hierarquia
+      <ol>
+        <li>Acesso a banco de dados</li>
+        <li>Serviços expostos para GUI</li>
+        <li>Orquestrador de serviços</li>
+      </ol>
+    </li>
+    <li>
+      Se comunicam através de HTTP
+      <ol>
+        <li style="opacity: 0.1;">Método HTTP</li>
+        <li>Headers relacionados a metadados da mensagem e do cliente</li>
+        <li style="opacity: 0.1;">Mensagem em formato de texto</li>
+        <li style="opacity: 0.1;">Código de status HTTP</li>
+      </ol>
+    </li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <h1 style={{ marginTop: 'unset' }}>Características</h1>
+  <ol>
+    <li style="opacity: 0.1;">
+      Pode ter algum nível de hierarquia
+      <ol>
+        <li>Acesso a banco de dados</li>
+        <li>Serviços expostos para GUI</li>
+        <li>Orquestrador de serviços</li>
+      </ol>
+    </li>
+    <li>
+      Se comunicam através de HTTP
+      <ol>
+        <li style="opacity: 0.1;">Método HTTP</li>
+        <li style="opacity: 0.1;">Headers relacionados a metadados da mensagem e do cliente</li>
+        <li>Mensagem em formato de texto</li>
+        <li style="opacity: 0.1;">Código de status HTTP</li>
+      </ol>
+    </li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <h1 style={{ marginTop: 'unset' }}>Características</h1>
+  <ol>
+    <li style="opacity: 0.1;">
+      Pode ter algum nível de hierarquia
+      <ol>
+        <li>Acesso a banco de dados</li>
+        <li>Serviços expostos para GUI</li>
+        <li>Orquestrador de serviços</li>
+      </ol>
+    </li>
+    <li>
+      Se comunicam através de HTTP
+      <ol>
+        <li style="opacity: 0.1;">Método HTTP</li>
+        <li style="opacity: 0.1;">Headers relacionados a metadados da mensagem e do cliente</li>
+        <li style="opacity: 0.1;">Mensagem em formato de texto</li>
+        <li>Código de status HTTP</li>
+      </ol>
+    </li>
+  </ol>
+</Block>
+
+---
+
+<Block centralized>
+  <span style={{ fontSize: '180px', textAlign: 'center', lineHeight: '200px' }}>
+    O que é uma <br/>
+    <span style={{ fontSize: '220px', color: 'greenyellow' }}>API?</span><br/>
+  </span>
+</Block>
+
+---
+
+<Block>
+  <h1>Definição</h1>
+  <ol>
+    <li>Application Programming Interface (API)</li>
+    <li>Lista de operações que um serviço realiza</li>
+    <li>Cliente não precisa conhecer a implementação, só o contrato</li>
+  </ol>
+</Block>
+
+---
+
+<Block centralized>
+  <span style={{ fontSize: '180px', textAlign: 'center', lineHeight: '200px' }}>
+    O que são <br/>
+    <span style={{ fontSize: '220px', color: 'greenyellow' }}>microsserviços?</span><br/>
+  </span>
+</Block>
+
+---
+
+<Block>
+  <h1>Características</h1>
+  <ol>
+    <li style="opacity: 0.1;">Padrão de arquitetura</li>
+    <li style="opacity: 0.1;">Servidor é implementado como um conjunto de microsserviços que interagem</li>
+    <li style="opacity: 0.1;">Serviços com escopo de negócio pequeno que combinados criam uma aplicação</li>
+    <li style="opacity: 0.1;">Independente</li>
+    <li style="opacity: 0.1;">Deve ser possível delpoyar sem impactar outros serviços</li>
+    <li style="opacity: 0.1;">Gerenciam seus próprios dados</li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <h1>Características</h1>
+  <ol>
+    <li>Padrão de arquitetura</li>
+    <li style="opacity: 0.1;">Servidor é implementado como um conjunto de microsserviços que interagem</li>
+    <li style="opacity: 0.1;">Serviços com escopo de negócio pequeno que combinados criam uma aplicação</li>
+    <li style="opacity: 0.1;">Independente</li>
+    <li style="opacity: 0.1;">Deve ser possível delpoyar sem impactar outros serviços</li>
+    <li style="opacity: 0.1;">Gerenciam seus próprios dados</li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <h1>Características</h1>
+  <ol>
+    <li style="opacity: 0.1;">Padrão de arquitetura</li>
+    <li>Servidor é implementado como um conjunto de microsserviços que interagem</li>
+    <li style="opacity: 0.1;">Serviços com escopo de negócio pequeno que combinados criam uma aplicação</li>
+    <li style="opacity: 0.1;">Independente</li>
+    <li style="opacity: 0.1;">Deve ser possível delpoyar sem impactar outros serviços</li>
+    <li style="opacity: 0.1;">Gerenciam seus próprios dados</li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <h1>Características</h1>
+  <ol>
+    <li style="opacity: 0.1;">Padrão de arquitetura</li>
+    <li style="opacity: 0.1;">Servidor é implementado como um conjunto de microsserviços que interagem</li>
+    <li>Serviços com escopo de negócio pequeno que combinados criam uma aplicação</li>
+    <li style="opacity: 0.1;">Independente</li>
+    <li style="opacity: 0.1;">Deve ser possível delpoyar sem impactar outros serviços</li>
+    <li style="opacity: 0.1;">Gerenciam seus próprios dados</li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <h1>Características</h1>
+  <ol>
+    <li style="opacity: 0.1;">Padrão de arquitetura</li>
+    <li style="opacity: 0.1;">Servidor é implementado como um conjunto de microsserviços que interagem</li>
+    <li style="opacity: 0.1;">Serviços com escopo de negócio pequeno que combinados criam uma aplicação</li>
+    <li>Independente</li>
+    <li style="opacity: 0.1;">Deve ser possível delpoyar sem impactar outros serviços</li>
+    <li style="opacity: 0.1;">Gerenciam seus próprios dados</li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <h1>Características</h1>
+  <ol>
+    <li style="opacity: 0.1;">Padrão de arquitetura</li>
+    <li style="opacity: 0.1;">Servidor é implementado como um conjunto de microsserviços que interagem</li>
+    <li style="opacity: 0.1;">Serviços com escopo de negócio pequeno que combinados criam uma aplicação</li>
+    <li style="opacity: 0.1;">Independente</li>
+    <li>Deve ser possível delpoyar sem impactar outros serviços</li>
+    <li style="opacity: 0.1;">Gerenciam seus próprios dados</li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <h1>Características</h1>
+  <ol>
+    <li style="opacity: 0.1;">Padrão de arquitetura</li>
+    <li style="opacity: 0.1;">Servidor é implementado como um conjunto de microsserviços que interagem</li>
+    <li style="opacity: 0.1;">Serviços com escopo de negócio pequeno que combinados criam uma aplicação</li>
+    <li style="opacity: 0.1;">Independente</li>
+    <li style="opacity: 0.1;">Deve ser possível delpoyar sem impactar outros serviços</li>
+    <li>Gerenciam seus próprios dados</li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <h1>Problemas que resolve:</h1>
+  <h3 style={{ opacity: .5 }}>ou tenta resolver</h3>
+  <ol>
+    <li style="opacity: 0.1;">Quando se usa monolitos, o sistema inteiro precisa ser reconstruído,
+    retestado, e redeployado com qualquer alteração</li>
+    <li style="opacity: 0.1;">Para escalar aplicações em monolito é necessário escalar o sistema inteiro</li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <h1>Problemas que resolve:</h1>
+  <h3 style={{ opacity: .5 }}>ou tenta resolver</h3>
+  <ol>
+    <li>Quando se usa monolitos, o sistema inteiro precisa ser reconstruído,
+    retestado, e redeployado com qualquer alteração</li>
+    <li style="opacity: 0.1;">Para escalar aplicações em monolito é necessário escalar o sistema inteiro</li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <h1>Problemas que resolve:</h1>
+  <h3 style={{ opacity: .5 }}>ou tenta resolver</h3>
+  <ol>
+    <li style="opacity: 0.1;">Quando se usa monolitos, o sistema inteiro precisa ser reconstruído,
+    retestado, e redeployado com qualquer alteração</li>
+    <li>Para escalar aplicações em monolito é necessário escalar o sistema inteiro</li>
+  </ol>
+</Block>
+
+---
+
+<Block centralized>
+  <span style={{ fontSize: '180px', textAlign: 'center', lineHeight: '200px' }}>
+    Formatos de<br/>
+    <span style={{ fontSize: '220px', color: 'greenyellow' }}>mensagem</span><br/>
+  </span>
+</Block>
+
+---
+
+<Block>
+  <h1>Atividade</h1>
+  <p>
+  Pesquisa individual:
+  Descobrir quais protocolos e formatos de troca de mensagens mais antigos e suas diferenças
+  em comparação às consideradas padrões pela indústria de software.
+  </p>
+</Block>
+
+---
+
+<Block>
+  <h1>Principais formatos de mensagem</h1>
+  <ol style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', }}>
+    <li style="opacity: 0.1;">XML</li>
+    <li style="opacity: 0.1;">JSON</li>
+    <li style="opacity: 0.1;">CSV</li>
+    <li style="opacity: 0.1;">TSV</li>
+    <li style="opacity: 0.1;">Proto buffers</li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <h1>Principais formatos de mensagem</h1>
+  <ol style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', }}>
+    <li>XML</li>
+    <li style="opacity: 0.1;">JSON</li>
+    <li style="opacity: 0.1;">CSV</li>
+    <li style="opacity: 0.1;">TSV</li>
+    <li style="opacity: 0.1;">Proto buffers</li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <h1>Principais formatos de mensagem</h1>
+  <ol style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', }}>
+    <li style="opacity: 0.1;">XML</li>
+    <li>JSON</li>
+    <li style="opacity: 0.1;">CSV</li>
+    <li style="opacity: 0.1;">TSV</li>
+    <li style="opacity: 0.1;">Proto buffers</li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <h1>Principais formatos de mensagem</h1>
+  <ol style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', }}>
+    <li style="opacity: 0.1;">XML</li>
+    <li style="opacity: 0.1;">JSON</li>
+    <li>CSV</li>
+    <li style="opacity: 0.1;">TSV</li>
+    <li style="opacity: 0.1;">Proto buffers</li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <h1>Principais formatos de mensagem</h1>
+  <ol style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', }}>
+    <li style="opacity: 0.1;">XML</li>
+    <li style="opacity: 0.1;">JSON</li>
+    <li style="opacity: 0.1;">CSV</li>
+    <li>TSV</li>
+    <li style="opacity: 0.1;">Proto buffers</li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <h1>Principais formatos de mensagem</h1>
+  <ol style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', }}>
+    <li style="opacity: 0.1;">XML</li>
+    <li style="opacity: 0.1;">JSON</li>
+    <li style="opacity: 0.1;">CSV</li>
+    <li style="opacity: 0.1;">TSV</li>
+    <li>Proto buffers</li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <h1>XML</h1>
+  <a
+    onClick={e => {
+      e.preventDefault();
+      navigator.clipboard.writeText("file:///Users/menezes/Code/letscode/842-ifood/assets/ementa.xml");
+      alert('copiado pro clipboard');
+    }}
+  >
+    ementa.xml
+  </a>
+</Block>
+
+---
+
+<Block>
+  <h1>JSON</h1>
+  <pre style={{ fontSize: '27px' }}>
+    {JSON.stringify({
+      "ementa": [
+        {
+          "nome": "TÉCNICAS DE PROGRAMAÇÃO I (nodejs)",
+          "duracao": 9,
+          "descricao": "intro aos principais conceitos de nodejs",
+          "turno": "noite"
+        },
+        {
+          "nome": "PROGRAMAÇÃO WEB III",
+          "duracao": "9",
+          "descricao": "intro aos principais conceitos de web",
+          "turno": "noite"
+        },
+      ]
+    }, null, 2)}
+  </pre>
+</Block>
+
+---
+
+<Block>
+  <h1>CSV</h1>
+  <pre style={{ fontSize: '27px', lineHeight: '50px' }}>
+    nome,duracao,descricao,turno<br/>
+    TÉCNICAS DE PROGRAMAÇÃO I (nodejs),9,intro aos principais conceitos de nodejs,noite<br/>
+    PROGRAMAÇÃO WEB III,9,intro aos principais conceitos de web,noite
+  </pre>
+</Block>
+
+---
+
+<Block>
+  <h1>TSV</h1>
+  <pre style={{ fontSize: '20px', lineHeight: '50px' }}>
+    <table cellspacing="0" cellpadding="0" style={{ border: 'none' }}>
+      <tr> <td style={{ border: 'none' }}> nome   </td> <td style={{ border: 'none' }}> duracao </td> <td style={{ border: 'none' }}> descricao </td> <td style={{ border: 'none' }}> turno </td> </tr>
+      <tr> <td style={{ border: 'none' }}> TÉCNICAS DE PROGRAMAÇÃO I (nodejs)   </td> <td style={{ border: 'none' }}> 9 </td> <td style={{ border: 'none' }}> intro aos principais conceitos de nodejs </td> <td style={{ border: 'none' }}> noite </td> </tr>
+      <tr> <td style={{ border: 'none' }}> TÉCNICAS DE PROGRAMAÇÃO I (nodejs)   </td> <td style={{ border: 'none' }}> 9 </td> <td style={{ border: 'none' }}> intro aos principais conceitos de nodejs </td> <td style={{ border: 'none' }}> noite </td> </tr>
+    </table>
+  </pre>
+</Block>
+
+---
+
+<Block>
+  <Block centralized>
+    <span style={{ fontSize: '140px', textAlign: 'center', lineHeight: '130px' }}>
+      Principais<br/>
+      <span style={{ fontSize: '180px' }}>formas de</span><br/>
+      <span style={{ fontSize: '220px', color: 'greenyellow' }}>comunicação</span>
+    </span>
+  </Block>
+</Block>
+
+---
+
+<Block>
+  <ol>
+    <li>
+      HTTP
+      <ul>
+        <li style="opacity: 0.1;">Protocolo de comunicação para modelos cliente-servidor</li>
+      </ul>
+    </li>
+    <li>
+      HTTPS
+      <ul>
+        <li style="opacity: 0.1;">Versão do HTTP criptografada, garante comunicação segura entre cliente-servidor</li>
+      </ul>
+    </li>
+    <li style="opacity: 0.1;">REST</li>
+    <li style="opacity: 0.1;">SOAP</li>
+    <li style="opacity: 0.1;">MQTT</li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <ol>
+    <li>
+      HTTP
+      <ul>
+        <li>Protocolo de comunicação para modelos cliente-servidor</li>
+      </ul>
+    </li>
+    <li>
+      HTTPS
+      <ul>
+        <li style="opacity: 0.1;">Versão do HTTP criptografada, garante comunicação segura entre cliente-servidor</li>
+      </ul>
+    </li>
+    <li style="opacity: 0.1;">REST</li>
+    <li style="opacity: 0.1;">SOAP</li>
+    <li style="opacity: 0.1;">MQTT</li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <ol>
+  <li>
+    HTTP
+    <ul>
+      <li style="opacity: 0.1;">Protocolo de comunicação para modelos cliente-servidor</li>
+    </ul>
+  </li>
+  <li>
+    HTTPS
+    <ul>
+      <li>Versão do HTTP criptografada, garante comunicação segura entre cliente-servidor</li>
+    </ul>
+  </li>
+    <li style="opacity: 0.1;">REST</li>
+    <li style="opacity: 0.1;">SOAP</li>
+    <li style="opacity: 0.1;">MQTT</li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <a href="/88">SOAP antes!</a>
+  <ol>
+    <li>
+      REST
+      <ul>
+        <li style="opacity: 0.1;">Estilo de arquitetura para comunicação que usa HTTP</li>
+        <li style="opacity: 0.1;">Criado nos anos 2000 por Roy Fielding em <a target="_blank" href="https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm">tese de doutorado</a></li>
+        <li style="opacity: 0.1;">Descreve como sistemas deveriam se comunicar com funcionalidades do HTTP</li>
+        <li style="opacity: 0.1;">Stateless, cache, uniform representation, self discoverability → Restful</li>
+        <li style="opacity: 0.1;">Recursos/entidades diferentes estão em URLs diferentes</li>
+        <li style="opacity: 0.1;">Suportar métodos HTTP</li>
+        <li style="opacity: 0.1;">GET, POST, e DELETE são idempotentes</li>
+        <li style="opacity: 0.1;">Discoverable → com a URL base conseguimos descobrir funcionalidades</li>
+        <li style="opacity: 0.1;">HATEOAS</li>
+      </ul>
+    </li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <ol>
+    <li>
+      REST
+      <ul>
+        <li>Estilo de arquitetura para comunicação que usa HTTP</li>
+        <li style="opacity: 0.1;">Criado nos anos 2000 por Roy Fielding em <a target="_blank" href="https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm">tese de doutorado</a></li>
+        <li style="opacity: 0.1;">Descreve como sistemas deveriam se comunicar com funcionalidades do HTTP</li>
+        <li style="opacity: 0.1;">Stateless, cache, uniform representation, self discoverability → Restful</li>
+        <li style="opacity: 0.1;">Recursos/entidades diferentes estão em URLs diferentes</li>
+        <li style="opacity: 0.1;">Suportar métodos HTTP</li>
+        <li style="opacity: 0.1;">GET, POST, e DELETE são idempotentes</li>
+        <li style="opacity: 0.1;">Discoverable → com a URL base conseguimos descobrir funcionalidades</li>
+        <li style="opacity: 0.1;">HATEOAS</li>
+      </ul>
+    </li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <ol>
+    <li>
+      REST
+      <ul>
+        <li style="opacity: 0.1;">Estilo de arquitetura para comunicação que usa HTTP</li>
+        <li>Criado nos anos 2000 por Roy Fielding em <a target="_blank" href="https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm">tese de doutorado</a></li>
+        <li style="opacity: 0.1;">Descreve como sistemas deveriam se comunicar com funcionalidades do HTTP</li>
+        <li style="opacity: 0.1;">Stateless, cache, uniform representation, self discoverability → Restful</li>
+        <li style="opacity: 0.1;">Recursos/entidades diferentes estão em URLs diferentes</li>
+        <li style="opacity: 0.1;">Suportar métodos HTTP</li>
+        <li style="opacity: 0.1;">GET, POST, e DELETE são idempotentes</li>
+        <li style="opacity: 0.1;">Discoverable → com a URL base conseguimos descobrir funcionalidades</li>
+        <li style="opacity: 0.1;">HATEOAS</li>
+      </ul>
+    </li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <ol>
+    <li>
+      REST
+      <ul>
+        <li style="opacity: 0.1;">Estilo de arquitetura para comunicação que usa HTTP</li>
+        <li style="opacity: 0.1;">Criado nos anos 2000 por Roy Fielding em <a target="_blank" href="https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm">tese de doutorado</a></li>
+        <li>Descreve como sistemas deveriam se comunicar com funcionalidades do HTTP</li>
+        <li style="opacity: 0.1;">Stateless, cache, uniform representation, self discoverability → Restful</li>
+        <li style="opacity: 0.1;">Recursos/entidades diferentes estão em URLs diferentes</li>
+        <li style="opacity: 0.1;">Suportar métodos HTTP</li>
+        <li style="opacity: 0.1;">GET, POST, e DELETE são idempotentes</li>
+        <li style="opacity: 0.1;">Discoverable → com a URL base conseguimos descobrir funcionalidades</li>
+        <li style="opacity: 0.1;">HATEOAS</li>
+      </ul>
+    </li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <ol>
+    <li>
+      REST
+      <ul>
+        <li style="opacity: 0.1;">Estilo de arquitetura para comunicação que usa HTTP</li>
+        <li style="opacity: 0.1;">Criado nos anos 2000 por Roy Fielding em <a target="_blank" href="https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm">tese de doutorado</a></li>
+        <li style="opacity: 0.1;">Descreve como sistemas deveriam se comunicar com funcionalidades do HTTP</li>
+        <li>Stateless, cache, uniform representation, self discoverability → Restful</li>
+        <li style="opacity: 0.1;">Recursos/entidades diferentes estão em URLs diferentes</li>
+        <li style="opacity: 0.1;">Suportar métodos HTTP</li>
+        <li style="opacity: 0.1;">GET, POST, e DELETE são idempotentes</li>
+        <li style="opacity: 0.1;">Discoverable → com a URL base conseguimos descobrir funcionalidades</li>
+        <li style="opacity: 0.1;">HATEOAS</li>
+      </ul>
+    </li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <ol>
+    <li>
+      REST
+      <ul>
+        <li style="opacity: 0.1;">Estilo de arquitetura para comunicação que usa HTTP</li>
+        <li style="opacity: 0.1;">Criado nos anos 2000 por Roy Fielding em <a target="_blank" href="https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm">tese de doutorado</a></li>
+        <li style="opacity: 0.1;">Descreve como sistemas deveriam se comunicar com funcionalidades do HTTP</li>
+        <li style="opacity: 0.1;">Stateless, cache, uniform representation, self discoverability → Restful</li>
+        <li>Recursos/entidades diferentes estão em URLs diferentes</li>
+        <li style="opacity: 0.1;">Suportar métodos HTTP</li>
+        <li style="opacity: 0.1;">GET, POST, e DELETE são idempotentes</li>
+        <li style="opacity: 0.1;">Discoverable → com a URL base conseguimos descobrir funcionalidades</li>
+        <li style="opacity: 0.1;">HATEOAS</li>
+      </ul>
+    </li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <ol>
+    <li>
+      REST
+      <ul>
+        <li style="opacity: 0.1;">Estilo de arquitetura para comunicação que usa HTTP</li>
+        <li style="opacity: 0.1;">Criado nos anos 2000 por Roy Fielding em <a target="_blank" href="https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm">tese de doutorado</a></li>
+        <li style="opacity: 0.1;">Descreve como sistemas deveriam se comunicar com funcionalidades do HTTP</li>
+        <li style="opacity: 0.1;">Stateless, cache, uniform representation, self discoverability → Restful</li>
+        <li style="opacity: 0.1;">Recursos/entidades diferentes estão em URLs diferentes</li>
+        <li>Suportar métodos HTTP</li>
+        <li style="opacity: 0.1;">GET, POST, e DELETE são idempotentes</li>
+        <li style="opacity: 0.1;">Discoverable → com a URL base conseguimos descobrir funcionalidades</li>
+        <li style="opacity: 0.1;">HATEOAS</li>
+      </ul>
+    </li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <ol>
+    <li>
+      REST
+      <ul>
+        <li style="opacity: 0.1;">Estilo de arquitetura para comunicação que usa HTTP</li>
+        <li style="opacity: 0.1;">Criado nos anos 2000 por Roy Fielding em <a target="_blank" href="https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm">tese de doutorado</a></li>
+        <li style="opacity: 0.1;">Descreve como sistemas deveriam se comunicar com funcionalidades do HTTP</li>
+        <li style="opacity: 0.1;">Stateless, cache, uniform representation, self discoverability → Restful</li>
+        <li style="opacity: 0.1;">Recursos/entidades diferentes estão em URLs diferentes</li>
+        <li style="opacity: 0.1;">Suportar métodos HTTP</li>
+        <li>GET, POST, e DELETE são idempotentes</li>
+        <li style="opacity: 0.1;">Discoverable → com a URL base conseguimos descobrir funcionalidades</li>
+        <li style="opacity: 0.1;">HATEOAS</li>
+      </ul>
+    </li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <ol>
+    <li>
+      REST
+      <ul>
+        <li style="opacity: 0.1;">Estilo de arquitetura para comunicação que usa HTTP</li>
+        <li style="opacity: 0.1;">Criado nos anos 2000 por Roy Fielding em <a target="_blank" href="https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm">tese de doutorado</a></li>
+        <li style="opacity: 0.1;">Descreve como sistemas deveriam se comunicar com funcionalidades do HTTP</li>
+        <li style="opacity: 0.1;">Stateless, cache, uniform representation, self discoverability → Restful</li>
+        <li style="opacity: 0.1;">Recursos/entidades diferentes estão em URLs diferentes</li>
+        <li style="opacity: 0.1;">Suportar métodos HTTP</li>
+        <li style="opacity: 0.1;">GET, POST, e DELETE são idempotentes</li>
+        <li>Discoverable → com a URL base conseguimos descobrir funcionalidades</li>
+        <li style="opacity: 0.1;">HATEOAS</li>
+      </ul>
+    </li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <ol>
+    <li>
+      REST
+      <ul>
+        <li style="opacity: 0.1;">Estilo de arquitetura para comunicação que usa HTTP</li>
+        <li style="opacity: 0.1;">Criado nos anos 2000 por Roy Fielding em <a target="_blank" href="https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm">tese de doutorado</a></li>
+        <li style="opacity: 0.1;">Descreve como sistemas deveriam se comunicar com funcionalidades do HTTP</li>
+        <li style="opacity: 0.1;">Stateless, cache, uniform representation, self discoverability → Restful</li>
+        <li style="opacity: 0.1;">Recursos/entidades diferentes estão em URLs diferentes</li>
+        <li style="opacity: 0.1;">Suportar métodos HTTP</li>
+        <li style="opacity: 0.1;">GET, POST, e DELETE são idempotentes</li>
+        <li style="opacity: 0.1;">Discoverable → com a URL base conseguimos descobrir funcionalidades</li>
+        <li>HATEOAS</li>
+      </ul>
+    </li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <ol>
+    <li>
+      REST
+      <ul>
+        <li>Nível de maturidade, e.g. 0 → SOAP, 3 → HATEOAS</li>
+        <li style="opacity: 0.1;">Paginação, filtro, query, falta de schema pode causar incompatibilidades, /v2</li>
+      </ul>
+    </li>
+    <li style="opacity: 0.1;">
+      SOAP
+      <ul>
+        <li>Protocolo de comunicação entre serviços web que usa XML</li>
+        <li>Heavy weight standardized</li>
+        <li>Declarar operações com inputs, outputs, e errors → WSDL</li>
+        <li>Uma única URL</li>
+      </ul>
+    </li>
+    <li style="opacity: 0.1;">MQTT</li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <ol>
+    <li>
+      REST
+      <ul>
+        <li style="opacity: 0.1;">Nível de maturidade, e.g. 0 → SOAP, 3 → HATEOAS</li>
+        <li>Paginação, filtro, query, falta de schema pode causar incompatibilidades, /v2</li>
+      </ul>
+    </li>
+    <li style="opacity: 0.1;">
+      SOAP
+      <ul>
+        <li>Protocolo de comunicação entre serviços web que usa XML</li>
+        <li>Heavy weight standardized</li>
+        <li>Declarar operações com inputs, outputs, e errors → WSDL</li>
+        <li>Uma única URL</li>
+      </ul>
+    </li>
+    <li style="opacity: 0.1;">MQTT</li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <ol>
+    <li style="opacity: 0.1;">
+      REST
+      <ul>
+        <li>Nível de maturidade, e.g. 0 → SOAP, 3 → HATEOAS</li>
+        <li>Paginação, filtro, query, falta de schema pode causar incompatibilidades, /v2</li>
+      </ul>
+    </li>
+    <li>
+      SOAP
+      <ul>
+        <li>Protocolo de comunicação entre serviços web que usa XML</li>
+        <li style="opacity: 0.1;">Heavy weight standardized</li>
+        <li style="opacity: 0.1;">Declarar operações com inputs, outputs, e errors → WSDL</li>
+        <li style="opacity: 0.1;">Uma única URL</li>
+      </ul>
+    </li>
+    <li style="opacity: 0.1;">MQTT</li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <ol>
+    <li style="opacity: 0.1;">
+      REST
+      <ul>
+        <li>Nível de maturidade, e.g. 0 → SOAP, 3 → HATEOAS</li>
+        <li>Paginação, filtro, query, falta de schema pode causar incompatibilidades, /v2</li>
+      </ul>
+    </li>
+    <li>
+      SOAP
+      <ul>
+        <li style="opacity: 0.1;">Protocolo de comunicação entre serviços web que usa XML</li>
+        <li>Heavy weight standardized</li>
+        <li style="opacity: 0.1;">Declarar operações com inputs, outputs, e errors → WSDL</li>
+        <li style="opacity: 0.1;">Uma única URL</li>
+      </ul>
+    </li>
+    <li style="opacity: 0.1;">MQTT</li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <ol>
+    <li style="opacity: 0.1;">
+      REST
+      <ul>
+        <li>Nível de maturidade, e.g. 0 → SOAP, 3 → HATEOAS</li>
+        <li>Paginação, filtro, query, falta de schema pode causar incompatibilidades, /v2</li>
+      </ul>
+    </li>
+    <li>
+      SOAP
+      <ul>
+        <li style="opacity: 0.1;">Protocolo de comunicação entre serviços web que usa XML</li>
+        <li style="opacity: 0.1;">Heavy weight standardized</li>
+        <li>Declarar operações com inputs, outputs, e errors → WSDL</li>
+        <li style="opacity: 0.1;">Uma única URL</li>
+      </ul>
+    </li>
+    <li style="opacity: 0.1;">MQTT</li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <ol>
+    <li style="opacity: 0.1;">
+      REST
+      <ul>
+        <li>Nível de maturidade, e.g. 0 → SOAP, 3 → HATEOAS</li>
+        <li>Paginação, filtro, query, falta de schema pode causar incompatibilidades, /v2</li>
+      </ul>
+    </li>
+    <li>
+      SOAP
+      <ul>
+        <li style="opacity: 0.1;">Protocolo de comunicação entre serviços web que usa XML</li>
+        <li style="opacity: 0.1;">Heavy weight standardized</li>
+        <li style="opacity: 0.1;">Declarar operações com inputs, outputs, e errors → WSDL</li>
+        <li>Uma única URL</li>
+      </ul>
+    </li>
+    <li style="opacity: 0.1;">MQTT</li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <ol>
+    <li style="opacity: 0.1;">
+      REST
+      <ul>
+        <li>Nível de maturidade, e.g. 0 → SOAP, 3 → HATEOAS</li>
+        <li>Paginação, filtro, query, falta de schema pode causar incompatibilidades, /v2</li>
+      </ul>
+    </li>
+    <li>
+      SOAP
+      <ul>
+        <li style="opacity: 0.1;">Protocolo de comunicação entre serviços web que usa XML</li>
+        <li style="opacity: 0.1;">Heavy weight standardized</li>
+        <li style="opacity: 0.1;">Declarar operações com inputs, outputs, e errors → WSDL</li>
+        <li style="opacity: 0.1;">Uma única URL</li>
+        <li>
+          <a href="/77">Agora sim REST!</a>
+        </li>
+      </ul>
+    </li>
+    <li style="opacity: 0.1;">MQTT</li>
+  </ol>
+</Block>
+
+---
+
+<Block>
+  <ol>
+    <li style="opacity: 0.1;">
+      REST
+      <ul>
+        <li>Nível de maturidade, e.g. 0 → SOAP, 3 → HATEOAS</li>
+        <li>Paginação, filtro, query, falta de schema pode causar incompatibilidades, /v2</li>
+      </ul>
+    </li>
+    <li style="opacity: 0.1;">
+      SOAP
+      <ul>
+        <li>Protocolo de comunicação entre serviços web que usa XML</li>
+        <li>Heavy weight standardized</li>
+        <li>Declarar operações com inputs, outputs, e errors → WSDL</li>
+        <li>Uma única URL</li>
+      </ul>
+    </li>
+    <li>
+      MQTT
+      <ul>
+        <li>Protocolo de comunicação para internet das coisas (IoT)</li>
+        <li>Lightweight pub/sub</li>
+      </ul>
+    </li>
+  </ol>
+</Block>
+
+---
+
+<Block centralized>
+  <span style={{ fontSize: '180px', textAlign: 'center', lineHeight: '200px' }}>
+    O que diabos é <br/>
+    <span style={{ fontSize: '220px', color: 'greenyellow' }}>HATEOAS?</span>
+  </span>
+</Block>
+
+---
+
+<Block>
+  /turmas
+  <pre>
+    {
+      JSON.stringify({
+        "turmas": [
+          {
+            "id": "842",
+            "descricao": "fullstack",
+            "alunos": [
+              "mônica",
+              "cascão",
+              "cebolinha"
+            ]
+          }
+        ]
+      }, null, 2)
+    }
+  </pre>
+</Block>
+
+---
+
+<Block>
+  /turmas
+  <pre>
+    {
+      JSON.stringify({
+        "turmas": [
+          {
+            "id": "842",
+            "descricao": "fullstack",
+            "alunos": [
+              "311aa0d1-db40-4d8e-9349-1c325593daa0",
+              "cf1b548d-0388-4a0d-bc59-de1f04b3934f",
+              "5c004e50-173d-4da6-ab8b-18b5c93e179d"
+            ]
+          }
+        ]
+      }, null, 2)
+    }
+  </pre>
+</Block>
+
+---
+
+<Block>
+  /turmas
+  <pre style={{ fontSize: ".8em" }}>
+    {
+      JSON.stringify({
+        "turmas": [
+          {
+            "id": "842",
+            "descricao": "fullstack",
+            "alunos": "letscode.com.br/turmas/842/alunos"
+          }
+        ]
+      }, null, 2)
+    }
+  </pre>
+</Block>
+
+---
+
+<Block>
+  /turmas
+  <pre style={{ fontSize: ".8em" }}>
+    {
+      JSON.stringify({
+        "turmas": [
+          {
+            "id": "842",
+            "descricao": "fullstack",
+            "alunos": "letscode.com.br/turmas/842/alunos"
+          }
+        ]
+      }, null, 2)
+    }
+  </pre>
+</Block>
+
+---
+
+<Block>
+  /turma
+  <pre style={{ fontSize: ".8em" }}>
+    {
+      JSON.stringify({
+            "id": "842",
+            "descricao": "fullstack",
+            "links": [
+              {
+                "type": "POST",
+                "rel": "turma_iniciar",
+                "uri": "letscode.com.br/turmas/842/inicio"
+              },
+              {
+                "type": "DELETE",
+                "rel": "self",
+                "uri": "letscode.com.br/turmas/842"
+              },
+            ]
+      }, null, 2)
+    }
+  </pre>
+</Block>
+
+---
+
+<Block centralized>
+  <span style={{ fontSize: '100px', textAlign: 'center', lineHeight: '130px' }}>
+    Introdução a <br/>
+    <span style={{ fontSize: '140px', color: 'slateblue' }}>RESTful </span><br/>
+    <span style={{ fontSize: '180px' }}>e modelagem baseada em </span><br/>
+    <span style={{ fontSize: '220px', color: 'greenyellow' }}>recursos</span>
+  </span>
+</Block>
+
+---
+
+<Block centralized>
+  <Image
+    src="https://www.pngall.com/wp-content/uploads/2018/05/Disney-PNG.png"
+    height={500}
+    width={600}
+  />
+</Block>
+
+---
