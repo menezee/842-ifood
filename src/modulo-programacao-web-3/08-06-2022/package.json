@@ -1,0 +1,22 @@
+{
+  "name": "06-06-2022",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon express-server.js",
+    "docker:run:pg": "docker run --name postgres-repair-shop -e POSTGRES_PASSWORD=letscode -d 5432:5432 postgres",
+    "psql": "docker exec -it postgres-repair-shop psql -U postgres"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "knex": "^2.1.0",
+    "pg": "^8.7.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}

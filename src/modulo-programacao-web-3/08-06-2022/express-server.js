@@ -3,9 +3,9 @@ const app = express();
 const veiculosRouter = require('./veiculos-router');
 
 app.use(express.text());
+app.use(express.json());
 
 app.use('/veiculos', veiculosRouter);
-// app.use('/oficina', oficinaRouter);
 
 app.use('*', (req, res) => {
   res.send('não há mapeamento para essa rota!');
