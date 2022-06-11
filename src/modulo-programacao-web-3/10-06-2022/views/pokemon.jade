@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    h1= pokemon.name
+    img(src= pokemon.image)
+    p= new Date(timestamp)
+    ul
+      each val, index in pokemon.moves
+          li= index + ': ' + val.move.name
