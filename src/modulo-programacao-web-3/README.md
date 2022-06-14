@@ -12,8 +12,8 @@
 3. [x] Modelagem baseade em Recursos
 4. [x] Mapeamento do vebos (métodos) HTTP para manipulação de recursos
 5. [x] Instalação e Uso de Cliente HTTP (postman / insomnia / outro)
-6. [ ] Consultas (GET, HEAD)
-7. [ ] Comandos (POST, PUT, DELETE, PATCH)
+6. [x] Consultas (GET, HEAD)
+7. [x] Comandos (POST, PUT, DELETE, PATCH)
 8. [ ] Autorização e Autenticação (JWT)
 
 ### To spin up Postgres
